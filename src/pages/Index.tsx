@@ -348,24 +348,11 @@ export default function Index() {
             </div>
 
             <div className="relative">
-              <div className="bg-white rounded-2xl p-6 shadow-xl">
-                <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
-                  <Icon name="Camera" size={20} className="mr-2 text-blue-500" />
-                  Выберите камеру
-                </h3>
-                
-                <div className="relative">
-                  <img 
-                    src="https://cdn.poehali.dev/files/2e56b081-c0a1-43e1-b75d-4e0c4bfcf2be.jpg" 
-                    alt="Карта камер - выберите камеру в приложении АКСИОСТВ" 
-                    className="w-full rounded-lg shadow-lg"
-                  />
-                </div>
-                
-                <div className="text-center text-sm text-gray-600 mt-4">
-                  г. Липецк, ул. Музыки, д. 10 кв. 170: <span className="font-semibold text-red-600">24 камеры</span>
-                </div>
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/files/2e56b081-c0a1-43e1-b75d-4e0c4bfcf2be.jpg" 
+                alt="Интерфейс приложения АКСИОСТВ - карта камер" 
+                className="w-full rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>
