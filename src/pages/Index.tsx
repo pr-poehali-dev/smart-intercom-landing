@@ -462,12 +462,12 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-green-500">
+      <section className="py-16 bg-gradient-to-r from-red-600 to-red-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
             Готовы сделать ваш дом безопаснее?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-red-100 mb-8">
             Оставьте заявку и получите бесплатную консультацию
           </p>
           
@@ -494,7 +494,7 @@ export default function Index() {
                 placeholder="Дополнительная информация" 
                 className="w-full h-24 resize-none"
               />
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600 text-lg py-6">
+              <Button className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-lg py-6">
                 Отправить заявку
               </Button>
             </form>
@@ -511,11 +511,12 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center">
-                  <Icon name="Shield" size={20} className="text-white" />
-                </div>
-                <span className="text-xl font-bold">АКСИОСТВ</span>
+              <div className="flex items-center space-x-3 mb-4">
+                <img 
+                  src="https://cdn.poehali.dev/files/1a89557c-b358-4617-9d1b-8ae8157d0144.png" 
+                  alt="АКСИОСТВ" 
+                  className="h-8 w-auto"
+                />
               </div>
               <p className="text-gray-400 text-sm">
                 Лидер в области умной видеодомофонии и видеонаблюдения
