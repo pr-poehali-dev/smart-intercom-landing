@@ -57,23 +57,25 @@ export default function Index() {
 Дата: ${new Date().toLocaleString('ru-RU')}
       `.trim()
 
-      const response = await fetch('/send-email.php', {
+      const formDataToSend = new FormData()
+      formDataToSend.append('name', `Имя: ${formData.name}`)
+      formDataToSend.append('phone', `Телефон: ${formData.phone}`)
+      formDataToSend.append('address', `Адрес: ${formData.address}`)
+      formDataToSend.append('message', `Дополнительная информация: ${formData.message}`)
+      formDataToSend.append('date', `Дата: ${new Date().toLocaleString('ru-RU')}`)
+
+      const response = await fetch('/send.php', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          to: 'admin@axiostv.ru',
-          subject: 'Новая заявка с сайта АКСИОСТВ',
-          body: emailBody
-        })
+        body: formDataToSend
       })
 
-      if (response.ok) {
-        alert('Заявка успешно отправлена!')
+      const result = await response.json()
+      
+      if (result.statusCode === 200) {
+        alert(result.message)
         setFormData({ name: '', phone: '', address: '', message: '' })
       } else {
-        throw new Error('Ошибка отправки')
+        throw new Error(result.message || 'Ошибка отправки')
       }
     } catch (error) {
       // Fallback на mailto если PHP endpoint недоступен
@@ -105,11 +107,13 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://cdn.poehali.dev/files/1a89557c-b358-4617-9d1b-8ae8157d0144.png" 
-                alt="АКСИОСТВ" 
-                className="h-8 w-auto"
-              />
+              <a href="/" className="cursor-pointer">
+                <img 
+                  src="https://cdn.poehali.dev/files/1a89557c-b358-4617-9d1b-8ae8157d0144.png" 
+                  alt="АКСИОСТВ" 
+                  className="h-8 w-auto"
+                />
+              </a>
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#advantages" className="text-gray-700 hover:text-red-600 transition-colors">Преимущества</a>
@@ -118,9 +122,11 @@ export default function Index() {
               <a href="#economy" className="text-gray-700 hover:text-red-600 transition-colors">Экономия</a>
               <a href="#convenience" className="text-gray-700 hover:text-red-600 transition-colors">Удобство</a>
             </div>
-            <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700">
-              Оставить заявку
-            </Button>
+            <a href="#application-form">
+              <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 ml-6 sm:ml-0">
+                Оставить заявку
+              </Button>
+            </a>
           </div>
         </div>
       </nav>
@@ -519,7 +525,7 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-red-600 to-red-500">
+      <section id="application-form" className="py-16 bg-gradient-to-r from-red-600 to-red-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
             Готовы сделать ваш дом безопаснее?
