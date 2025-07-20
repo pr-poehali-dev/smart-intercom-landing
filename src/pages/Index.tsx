@@ -143,7 +143,7 @@ export default function Index() {
                 color: "green"
               },
               {
-                icon: "DollarSign",
+                icon: "CircleEllipsis",
                 title: "Экономия",
                 description: "Бесплатная установка и обслуживание",
                 color: "orange"
@@ -347,19 +347,17 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg bg-white transform scale-105">
+            <Card className="text-center border-0 shadow-lg bg-white">
               <CardHeader>
                 <div className="w-16 h-16 mx-auto bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4">
-                  <Icon name="DollarSign" size={28} className="text-white" />
+                  <span className="text-white text-2xl font-bold">₽</span>
                 </div>
                 <CardTitle className="text-xl">От 90₽ в месяц</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600">
                   Комплексная система безопасности по доступной цене
                 </p>
-                <div className="text-2xl font-bold text-orange-600">90₽</div>
-                <div className="text-sm text-gray-500">за квартиру в месяц</div>
               </CardContent>
             </Card>
 
