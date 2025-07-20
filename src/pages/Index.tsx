@@ -348,11 +348,13 @@ export default function Index() {
             </div>
 
             <div className="relative">
-              <img 
-                src="https://cdn.poehali.dev/files/2e56b081-c0a1-43e1-b75d-4e0c4bfcf2be.jpg" 
-                alt="Интерфейс приложения АКСИОСТВ - карта камер" 
-                className="w-full rounded-2xl shadow-xl"
-              />
+              <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8">
+                <img 
+                  src="https://cdn.poehali.dev/files/2e56b081-c0a1-43e1-b75d-4e0c4bfcf2be.jpg" 
+                  alt="Мобильное приложение АКСИОСТВ - карта камер" 
+                  className="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
