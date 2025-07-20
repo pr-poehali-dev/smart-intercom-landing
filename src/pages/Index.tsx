@@ -529,12 +529,12 @@ export default function Index() {
             
             <div>
               <h3 className="font-semibold mb-4">Услуги</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>Видеодомофоны</li>
-                <li>Видеонаблюдение</li>
-                <li>Умный двор</li>
-                <li>Мобильное приложение</li>
-              </ul>
+              <div className="flex flex-col space-y-2 text-sm text-gray-400">
+                <span>Видеодомофоны</span>
+                <span>Видеонаблюдение</span>
+                <span>Умный двор</span>
+                <span>Мобильное приложение</span>
+              </div>
             </div>
             
             <div>
