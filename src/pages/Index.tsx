@@ -124,7 +124,7 @@ export default function Index() {
               Почему выбирают нас
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              АКСИОСТВ — лидер в области умной видеодомофонии с проверенными решениями
+              АКСИОСТВ — лидер в области умной видеодомофонии и видеонаблюдения с проверенными решениями
             </p>
           </div>
 
@@ -198,7 +198,7 @@ export default function Index() {
                   "Камера внутреннего пространства",
                   "Камера лифтового холла",
                   "Камера 1-го этажа у почтовых ящиков",
-                  "Дополнительные камеры на углах дома"
+                  "Дополнительные камеры на углах и сзади дома"
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <Icon name="CheckCircle" size={20} className="text-green-500 flex-shrink-0" />
