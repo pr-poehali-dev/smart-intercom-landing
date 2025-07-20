@@ -3,8 +3,101 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import Icon from "@/components/ui/icon"
+import { useState } from "react"
 
 export default function Index() {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    address: '',
+    message: ''
+  })
+  const [errors, setErrors] = useState<{[key: string]: string}>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const validatePhone = (phone: string) => {
+    const cleanPhone = phone.replace(/\D/g, '')
+    return cleanPhone.length === 11 && cleanPhone.startsWith('79')
+  }
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }))
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: '' }))
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    const newErrors: {[key: string]: string} = {}
+    
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Номер телефона обязателен'
+    } else if (!validatePhone(formData.phone)) {
+      newErrors.phone = 'Номер должен содержать 11 цифр и начинаться с 79'
+    }
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors)
+      return
+    }
+
+    setIsSubmitting(true)
+    
+    try {
+      const emailBody = `
+Новая заявка с сайта АКСИОСТВ:
+
+Имя: ${formData.name}
+Телефон: ${formData.phone}
+Адрес: ${formData.address}
+Дополнительная информация: ${formData.message}
+
+Дата: ${new Date().toLocaleString('ru-RU')}
+      `.trim()
+
+      const response = await fetch('/send-email.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: 'admin@axiostv.ru',
+          subject: 'Новая заявка с сайта АКСИОСТВ',
+          body: emailBody
+        })
+      })
+
+      if (response.ok) {
+        alert('Заявка успешно отправлена!')
+        setFormData({ name: '', phone: '', address: '', message: '' })
+      } else {
+        throw new Error('Ошибка отправки')
+      }
+    } catch (error) {
+      // Fallback на mailto если PHP endpoint недоступен
+      const emailBody = `
+Новая заявка с сайта АКСИОСТВ:
+
+Имя: ${formData.name}
+Телефон: ${formData.phone}
+Адрес: ${formData.address}
+Дополнительная информация: ${formData.message}
+
+Дата: ${new Date().toLocaleString('ru-RU')}
+      `.trim()
+      
+      const mailtoLink = `mailto:admin@axiostv.ru?subject=Новая заявка с сайта АКСИОСТВ&body=${encodeURIComponent(emailBody)}`
+      window.open(mailtoLink, '_blank')
+      
+      alert('Откроется почтовый клиент для отправки заявки.')
+      setFormData({ name: '', phone: '', address: '', message: '' })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-pink-50">
       {/* Navigation */}
@@ -478,28 +571,46 @@ export default function Index() {
           <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-md mx-auto">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Сделать заявку</h3>
             
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <Input 
                 type="text" 
                 placeholder="Ваше имя" 
                 className="w-full"
+                value={formData.name}
+                onChange={(e) => handleInputChange('name', e.target.value)}
               />
-              <Input 
-                type="tel" 
-                placeholder="Телефон" 
-                className="w-full"
-              />
+              <div>
+                <Input 
+                  type="tel" 
+                  placeholder="Телефон (79XXXXXXXXX)" 
+                  className={`w-full ${errors.phone ? 'border-red-500' : ''}`}
+                  value={formData.phone}
+                  onChange={(e) => handleInputChange('phone', e.target.value)}
+                  required
+                />
+                {errors.phone && (
+                  <p className="text-red-500 text-xs mt-1">{errors.phone}</p>
+                )}
+              </div>
               <Input 
                 type="text" 
                 placeholder="Адрес дома" 
                 className="w-full"
+                value={formData.address}
+                onChange={(e) => handleInputChange('address', e.target.value)}
               />
               <Textarea 
                 placeholder="Дополнительная информация" 
                 className="w-full h-24 resize-none"
+                value={formData.message}
+                onChange={(e) => handleInputChange('message', e.target.value)}
               />
-              <Button className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-lg py-6">
-                Отправить заявку
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-lg py-6 disabled:opacity-50"
+              >
+                {isSubmitting ? 'Отправляется...' : 'Отправить заявку'}
               </Button>
             </form>
             
