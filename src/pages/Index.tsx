@@ -351,21 +351,19 @@ export default function Index() {
               <div className="bg-white rounded-2xl p-6 shadow-xl">
                 <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
                   <Icon name="Camera" size={20} className="mr-2 text-blue-500" />
-                  Карта камер
+                  Выберите камеру
                 </h3>
                 
-                <div className="bg-gray-100 rounded-lg p-4 mb-4">
-                  <div className="grid grid-cols-3 gap-2 text-xs">
-                    {[1,2,3,4,5,6,7,8,9].map((num) => (
-                      <div key={num} className="bg-blue-500 text-white p-2 rounded text-center">
-                        Камера {num}
-                      </div>
-                    ))}
-                  </div>
+                <div className="relative">
+                  <img 
+                    src="https://cdn.poehali.dev/files/2e56b081-c0a1-43e1-b75d-4e0c4bfcf2be.jpg" 
+                    alt="Карта камер - выберите камеру в приложении АКСИОСТВ" 
+                    className="w-full rounded-lg shadow-lg"
+                  />
                 </div>
                 
-                <div className="text-center text-sm text-gray-600">
-                  Двухподъездный дом: <span className="font-semibold text-blue-600">14 камер</span>
+                <div className="text-center text-sm text-gray-600 mt-4">
+                  г. Липецк, ул. Музыки, д. 10 кв. 170: <span className="font-semibold text-red-600">24 камеры</span>
                 </div>
               </div>
             </div>
