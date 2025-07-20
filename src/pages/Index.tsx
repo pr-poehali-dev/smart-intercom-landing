@@ -425,34 +425,11 @@ export default function Index() {
 
             <div className="relative">
               <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8">
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-gray-900">Входящий вызов</h3>
-                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                  </div>
-                  
-                  <div className="bg-gray-900 rounded-lg aspect-video mb-4 flex items-center justify-center">
-                    <div className="text-center text-white">
-                      <Icon name="User" size={48} className="mx-auto mb-2 opacity-60" />
-                      <p className="text-sm">Посетитель у входа</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex space-x-2">
-                    <Button className="flex-1 bg-red-500 hover:bg-red-600">
-                      <Icon name="PhoneOff" size={16} className="mr-2" />
-                      Отклонить
-                    </Button>
-                    <Button className="flex-1 bg-green-500 hover:bg-green-600">
-                      <Icon name="Unlock" size={16} className="mr-2" />
-                      Открыть
-                    </Button>
-                    <Button className="flex-1 bg-blue-500 hover:bg-blue-600">
-                      <Icon name="Phone" size={16} className="mr-2" />
-                      Ответить
-                    </Button>
-                  </div>
-                </div>
+                <img 
+                  src="https://cdn.poehali.dev/files/6ce73db6-e6f6-4359-b38d-622df44b49ec.jpg" 
+                  alt="Мобильное приложение АКСИОСТВ - управление домом" 
+                  className="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
+                />
               </div>
             </div>
           </div>
