@@ -6,25 +6,26 @@ import Icon from "@/components/ui/icon"
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-pink-50">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center">
-                <Icon name="Shield" size={20} className="text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">АКСИОСТВ</span>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="https://cdn.poehali.dev/files/1a89557c-b358-4617-9d1b-8ae8157d0144.png" 
+                alt="АКСИОСТВ" 
+                className="h-8 w-auto"
+              />
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#advantages" className="text-gray-700 hover:text-blue-600 transition-colors">Преимущества</a>
-              <a href="#security" className="text-gray-700 hover:text-blue-600 transition-colors">Безопасность</a>
-              <a href="#personalization" className="text-gray-700 hover:text-blue-600 transition-colors">Персонализация</a>
-              <a href="#economy" className="text-gray-700 hover:text-blue-600 transition-colors">Экономия</a>
-              <a href="#convenience" className="text-gray-700 hover:text-blue-600 transition-colors">Удобство</a>
+              <a href="#advantages" className="text-gray-700 hover:text-red-600 transition-colors">Преимущества</a>
+              <a href="#security" className="text-gray-700 hover:text-red-600 transition-colors">Безопасность</a>
+              <a href="#personalization" className="text-gray-700 hover:text-red-600 transition-colors">Персонализация</a>
+              <a href="#economy" className="text-gray-700 hover:text-red-600 transition-colors">Экономия</a>
+              <a href="#convenience" className="text-gray-700 hover:text-red-600 transition-colors">Удобство</a>
             </div>
-            <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
+            <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700">
               Оставить заявку
             </Button>
           </div>
@@ -39,7 +40,7 @@ export default function Index() {
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Умный двор
-                  <span className="block bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
                     нового поколения
                   </span>
                 </h1>
@@ -50,11 +51,11 @@ export default function Index() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg px-8 py-4">
+                <Button size="lg" className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-lg px-8 py-4">
                   <Icon name="Play" size={20} className="mr-2" />
                   Смотреть видео
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-2 border-blue-200 hover:bg-blue-50">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-2 border-red-200 hover:bg-red-50">
                   Узнать больше
                 </Button>
               </div>
@@ -76,8 +77,8 @@ export default function Index() {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-100 to-green-100 rounded-3xl p-8 relative overflow-hidden">
-                <div className="absolute top-4 right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-green-500 rounded-full opacity-20"></div>
+              <div className="bg-gradient-to-br from-red-100 to-red-100 rounded-3xl p-8 relative overflow-hidden">
+                <div className="absolute top-4 right-4 w-24 h-24 bg-gradient-to-br from-red-500 to-red-500 rounded-full opacity-20"></div>
                 <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-20"></div>
                 
                 <div className="bg-white rounded-2xl p-6 shadow-xl">
@@ -157,8 +158,8 @@ export default function Index() {
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg">
                 <CardHeader className="text-center">
                   <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${
-                    item.color === 'blue' ? 'from-blue-500 to-blue-600' :
-                    item.color === 'green' ? 'from-green-500 to-green-600' :
+                    item.color === 'blue' ? 'from-red-500 to-red-600' :
+                    item.color === 'green' ? 'from-red-500 to-red-600' :
                     item.color === 'orange' ? 'from-orange-500 to-orange-600' :
                     'from-purple-500 to-purple-600'
                   } flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
