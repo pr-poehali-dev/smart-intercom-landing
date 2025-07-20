@@ -365,39 +365,12 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
-              <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl p-6">
-                <div className="bg-white rounded-xl p-6 shadow-lg">
-                  <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
-                    <Icon name="Smartphone" size={20} className="mr-2 text-green-500" />
-                    Мобильное приложение
-                  </h3>
-                  
-                  <div className="space-y-3">
-                    <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium">Ваш ребенок дома</span>
-                        <span className="text-xs text-gray-500">15:30</span>
-                      </div>
-                      <p className="text-xs text-gray-600 mt-1">Вход по персональному ключу</p>
-                    </div>
-                    
-                    <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium">Звонок в домофон</span>
-                        <span className="text-xs text-gray-500">14:22</span>
-                      </div>
-                      <p className="text-xs text-gray-600 mt-1">Курьер с доставкой</p>
-                    </div>
-                    
-                    <div className="bg-orange-50 p-3 rounded-lg border-l-4 border-orange-500">
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium">Пропущенный вызов</span>
-                        <span className="text-xs text-gray-500">12:15</span>
-                      </div>
-                      <p className="text-xs text-gray-600 mt-1">Незнакомый посетитель</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl p-8">
+                <img 
+                  src="https://cdn.poehali.dev/files/40d1db1e-b79e-426b-b60c-90afa35bf363.jpg" 
+                  alt="Мобильное приложение АКСИОСТВ - персональный контроль" 
+                  className="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
+                />
               </div>
             </div>
 
@@ -535,8 +508,8 @@ export default function Index() {
             <div className="relative">
               <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8">
                 <img 
-                  src="https://cdn.poehali.dev/files/40d1db1e-b79e-426b-b60c-90afa35bf363.jpg" 
-                  alt="Мобильное приложение АКСИОСТВ - события и уведомления" 
+                  src="https://cdn.poehali.dev/files/6ce73db6-e6f6-4359-b38d-622df44b49ec.jpg" 
+                  alt="Мобильное приложение АКСИОСТВ - управление домом" 
                   className="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
                 />
               </div>
