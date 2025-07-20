@@ -530,19 +530,19 @@ export default function Index() {
             <div>
               <h3 className="font-semibold mb-4">Услуги</h3>
               <div className="flex flex-col space-y-2 text-sm text-gray-400">
-                <span>Видеодомофоны</span>
-                <span>Видеонаблюдение</span>
-                <span>Умный двор</span>
-                <span>Мобильное приложение</span>
+                <span>Видеодомофон и видеонаблюдение в МКД</span>
+                <span>Индивидуальное видеонаблюдение</span>
+                <span>Интернет</span>
+                <span>Телевидение</span>
               </div>
             </div>
             
             <div>
               <h3 className="font-semibold mb-4">Контакты</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>8 (800) 123-45-67</li>
-                <li>info@aksiostv.ru</li>
-                <li>г. Москва, ул. Примерная, 1</li>
+                <li>+7-904-681-0003</li>
+                <li>admin@axiostv.ru</li>
+                <li>г. Липецк, пр. Победы 106а</li>
               </ul>
             </div>
             
