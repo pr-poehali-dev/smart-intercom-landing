@@ -78,7 +78,7 @@ export default function Smartyard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <a href="/smartyard" className="cursor-pointer">
+              <a href="/" className="cursor-pointer">
                 <img 
                   src="https://cdn.poehali.dev/files/1a89557c-b358-4617-9d1b-8ae8157d0144.png" 
                   alt="АКСИОСТВ" 
@@ -94,7 +94,7 @@ export default function Smartyard() {
               <a href="#convenience" className="text-gray-700 hover:text-red-600 transition-colors">Удобство</a>
             </div>
             <a href="#application-form">
-              <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 ml-6 sm:ml-0">
+              <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-lg py-6 ml-6 sm:ml-0">
                 Оставить заявку
               </Button>
             </a>
