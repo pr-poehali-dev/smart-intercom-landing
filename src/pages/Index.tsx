@@ -70,6 +70,19 @@ const services = [
 ]
 
 export default function Index() {
+  const getColorClasses = (color: string) => {
+    const colorMap: Record<string, string> = {
+      red: 'bg-gradient-to-br from-red-500 to-red-600',
+      blue: 'bg-gradient-to-br from-blue-500 to-blue-600',
+      green: 'bg-gradient-to-br from-green-500 to-green-600',
+      purple: 'bg-gradient-to-br from-purple-500 to-purple-600',
+      orange: 'bg-gradient-to-br from-orange-500 to-orange-600',
+      emerald: 'bg-gradient-to-br from-emerald-500 to-emerald-600',
+      indigo: 'bg-gradient-to-br from-indigo-500 to-indigo-600'
+    }
+    return colorMap[color] || 'bg-gradient-to-br from-gray-500 to-gray-600'
+  }
+
   const renderServiceCard = (service: typeof services[0]) => {
     const CardWrapper = service.internal ? Link : 'a'
     const linkProps = service.internal 
@@ -80,7 +93,7 @@ export default function Index() {
       <CardWrapper key={service.id} {...linkProps} className="block">
         <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-gray-50 to-white h-full cursor-pointer">
           <CardHeader className="text-center pb-4">
-            <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-${service.color}-500 to-${service.color}-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+            <div className={`w-16 h-16 mx-auto rounded-2xl ${getColorClasses(service.color)} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
               <Icon name={service.icon as any} size={24} className="text-white" />
             </div>
             <CardTitle className="text-xl font-bold text-gray-900">{service.title}</CardTitle>
