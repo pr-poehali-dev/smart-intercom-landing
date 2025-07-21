@@ -462,11 +462,6 @@ export default function Smartyard() {
 
             <div className="relative">
               <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8">
-                <img 
-                  src="https://cdn.poehali.dev/files/6ce73db6-e6f6-4359-b38d-622df44b49ec.jpg" 
-                  alt="Мобильное приложение АКСИОСТВ - управление домом" 
-                  className="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
-                />
               </div>
             </div>
           </div>
