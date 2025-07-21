@@ -188,11 +188,11 @@ export default function Index() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Icon name="Mail" size={16} className="text-red-400" />
-                  <a href="mailto:admin@axiostv.ru" className="hover:text-white transition-colors">admin@axiostv.ru</a>
+                  <a href="mailto:admin@axiostv.ru" className="hover:text-white transition-colors">Email</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Icon name="MapPin" size={16} className="text-red-400" />
-                  <span>г. Липецк, пр. Победы 106а</span>
+                  <span>г. Липецк, пр. Победы 106а, нежилое помещение 38</span>
                 </div>
               </div>
             </div>
@@ -200,8 +200,7 @@ export default function Index() {
             {/* Legal Information */}
             <div className="space-y-3 text-sm text-gray-400">
               <div>
-                ИНН 4824066945 ОГРН 1164827056206 
-                <a href="mailto:admin@axiostv.ru" className="text-red-400 hover:text-red-300 ml-1">Email</a>
+                ИНН 4824066945 ОГРН 1164827056206
               </div>
               <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
                 <a href="https://axiostv.ru/Policy.html" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
