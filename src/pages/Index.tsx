@@ -53,7 +53,7 @@ const services = [
     id: 6,
     title: "Как оплатить",
     description: "Подробное описание доступных способов оплаты",
-    icon: "CreditCard",
+    icon: "Coins",
     link: "https://axiostv.ru/pay/",
     color: "emerald",
     internal: false
@@ -62,7 +62,7 @@ const services = [
     id: 7,
     title: "Личный кабинет",
     description: "Детализация и управление услугами",
-    icon: "User",
+    icon: "Files",
     link: "https://bll.axiostv.ru/index.html",
     color: "indigo",
     internal: false
