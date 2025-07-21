@@ -3,9 +3,100 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Icon from "@/components/ui/icon"
 import { Link } from "react-router-dom"
 
+const services = [
+  {
+    id: 1,
+    title: "Умный двор",
+    description: "Комплексная система безопасности для многоквартирных домов с видеодомофоном, видеонаблюдением и мобильным приложением",
+    icon: "Home",
+    link: "/smartyard",
+    color: "red",
+    internal: true
+  },
+  {
+    id: 2,
+    title: "Услуги для дома",
+    description: "Интернет, телевидение, видеонаблюдение, умный дом",
+    icon: "Wifi",
+    link: "https://axiostv.ru/b2c/",
+    color: "blue",
+    internal: false
+  },
+  {
+    id: 3,
+    title: "Для бизнеса",
+    description: "Комплексные решения для юридических лиц",
+    icon: "Building",
+    link: "https://axiostv.ru/b2b/",
+    color: "green",
+    internal: false
+  },
+  {
+    id: 4,
+    title: "Просмотр ТВ",
+    description: "Телевидение на Вашем компьютере",
+    icon: "Monitor",
+    link: "http://axiostv.ru/tvportal/",
+    color: "purple",
+    internal: false
+  },
+  {
+    id: 5,
+    title: "Список приложений",
+    description: "Установите мобильные приложения на все случаи жизни",
+    icon: "Smartphone",
+    link: "https://axiostv.ru/apps/",
+    color: "orange",
+    internal: false
+  },
+  {
+    id: 6,
+    title: "Как оплатить",
+    description: "Подробное описание доступных способов оплаты",
+    icon: "CreditCard",
+    link: "https://axiostv.ru/pay/",
+    color: "emerald",
+    internal: false
+  },
+  {
+    id: 7,
+    title: "Личный кабинет",
+    description: "Детализация и управление услугами",
+    icon: "User",
+    link: "https://bll.axiostv.ru/index.html",
+    color: "indigo",
+    internal: false
+  }
+]
+
 export default function Index() {
+  const renderServiceCard = (service: typeof services[0]) => {
+    const CardWrapper = service.internal ? Link : 'a'
+    const linkProps = service.internal 
+      ? { to: service.link }
+      : { href: service.link, target: "_blank", rel: "noopener noreferrer" }
+
+    return (
+      <CardWrapper key={service.id} {...linkProps} className="block">
+        <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-gray-50 to-white h-full cursor-pointer">
+          <CardHeader className="text-center pb-4">
+            <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-${service.color}-500 to-${service.color}-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+              <Icon name={service.icon as any} size={24} className="text-white" />
+            </div>
+            <CardTitle className="text-xl font-bold text-gray-900">{service.title}</CardTitle>
+          </CardHeader>
+          <CardContent className="text-center">
+            <CardDescription className="text-gray-600 text-base leading-relaxed">
+              {service.description}
+            </CardDescription>
+          </CardContent>
+        </Card>
+      </CardWrapper>
+    )
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,129 +120,94 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="pt-20 pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto text-center">
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
                   АКСИОСТВ
                 </span>
               </h1>
-              <p className="text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 Лидер в области умной видеодомофонии и видеонаблюдения
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mt-16">
-              <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-red-50 to-red-100">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="Home" size={32} className="text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900">Умный двор</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center space-y-4">
-                  <CardDescription className="text-gray-700 text-lg">
-                    Комплексная система безопасности для многоквартирных домов с видеодомофоном, 
-                    видеонаблюдением и мобильным приложением
-                  </CardDescription>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-center space-x-2">
-                      <Icon name="CheckCircle" size={16} className="text-green-500" />
-                      <span className="text-sm text-gray-600">Бесплатная установка</span>
-                    </div>
-                    <div className="flex items-center justify-center space-x-2">
-                      <Icon name="CheckCircle" size={16} className="text-green-500" />
-                      <span className="text-sm text-gray-600">От 90₽ в месяц</span>
-                    </div>
-                    <div className="flex items-center justify-center space-x-2">
-                      <Icon name="CheckCircle" size={16} className="text-green-500" />
-                      <span className="text-sm text-gray-600">Архив 6 месяцев</span>
-                    </div>
-                  </div>
-                  <Link to="/smartyard" className="block pt-4">
-                    <Button className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-lg py-6">
-                      Узнать подробнее
-                      <Icon name="ArrowRight" size={20} className="ml-2" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-
-              <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-blue-50 to-blue-100">
-                <CardHeader className="text-center pb-4">
-                  <div className="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="Building" size={32} className="text-white" />
-                  </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900">Другие услуги</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center space-y-4">
-                  <CardDescription className="text-gray-700 text-lg">
-                    Индивидуальное видеонаблюдение, интернет, телевидение и другие 
-                    технологические решения для вашего дома
-                  </CardDescription>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-center space-x-2">
-                      <Icon name="Wifi" size={16} className="text-blue-500" />
-                      <span className="text-sm text-gray-600">Высокоскоростной интернет</span>
-                    </div>
-                    <div className="flex items-center justify-center space-x-2">
-                      <Icon name="Monitor" size={16} className="text-blue-500" />
-                      <span className="text-sm text-gray-600">Цифровое телевидение</span>
-                    </div>
-                    <div className="flex items-center justify-center space-x-2">
-                      <Icon name="Camera" size={16} className="text-blue-500" />
-                      <span className="text-sm text-gray-600">Индивидуальное видеонаблюдение</span>
-                    </div>
-                  </div>
-                  <div className="pt-4">
-                    <Button variant="outline" className="w-full border-blue-500 text-blue-600 hover:bg-blue-50 text-lg py-6" disabled>
-                      Скоро доступно
-                      <Icon name="Clock" size={20} className="ml-2" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="mt-16 pt-8 border-t border-gray-200">
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Свяжитесь с нами</h3>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-600">
-                  <div className="flex items-center space-x-2">
-                    <Icon name="Phone" size={16} className="text-red-500" />
-                    <span>+7-904-681-0003</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Icon name="Mail" size={16} className="text-red-500" />
-                    <span>admin@axiostv.ru</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Icon name="MapPin" size={16} className="text-red-500" />
-                    <span>г. Липецк, пр. Победы 106а</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Services Grid */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {services.slice(0, 4).map(renderServiceCard)}
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 max-w-5xl mx-auto">
+            {services.slice(4).map(renderServiceCard)}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-3 mb-4">
+          <div className="text-center space-y-6">
+            <div className="flex items-center justify-center space-x-3 mb-6">
               <img 
                 src="https://cdn.poehali.dev/files/1a89557c-b358-4617-9d1b-8ae8157d0144.png" 
                 alt="АКСИОСТВ" 
                 className="h-8 w-auto"
               />
             </div>
-            <p className="text-gray-400 text-sm">
-              &copy; 2024 АКСИОСТВ. Все права защищены.
-            </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white">Контактная информация</h3>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
+                <div className="flex items-center space-x-2">
+                  <Icon name="Phone" size={16} className="text-red-400" />
+                  <a href="tel:+79046810003" className="hover:text-white transition-colors">+7-904-681-0003</a>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Icon name="Phone" size={16} className="text-red-400" />
+                  <a href="tel:+74742210001" className="hover:text-white transition-colors">+7-4742-210001</a>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Icon name="Mail" size={16} className="text-red-400" />
+                  <a href="mailto:admin@axiostv.ru" className="hover:text-white transition-colors">admin@axiostv.ru</a>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Icon name="MapPin" size={16} className="text-red-400" />
+                  <span>г. Липецк, пр. Победы 106а</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Legal Information */}
+            <div className="space-y-3 text-sm text-gray-400">
+              <div>
+                ИНН 4824066945 ОГРН 1164827056206 
+                <a href="mailto:admin@axiostv.ru" className="text-red-400 hover:text-red-300 ml-1">Email</a>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+                <a href="https://axiostv.ru/Policy.html" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Политика конфиденциальности
+                </a>
+                <a href="https://axiostv.ru/UserAgreement.html" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Пользовательское соглашение
+                </a>
+                <a href="https://axiostv.ru/cloud_video_oferta.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Договор оферты видеонаблюдения и видеодомофонии
+                </a>
+              </div>
+            </div>
+
+            <div className="pt-6 border-t border-gray-800">
+              <p className="text-gray-500 text-sm">
+                &copy; 2024 АКСИОСТВ. Все права защищены.
+              </p>
+            </div>
           </div>
         </div>
       </footer>
