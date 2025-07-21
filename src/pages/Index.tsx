@@ -46,55 +46,26 @@ export default function Index() {
     setIsSubmitting(true)
     
     try {
-      const emailBody = `
-Новая заявка с сайта АКСИОСТВ:
-
-Имя: ${formData.name}
-Телефон: ${formData.phone}
-Адрес: ${formData.address}
-Дополнительная информация: ${formData.message}
-
-Дата: ${new Date().toLocaleString('ru-RU')}
-      `.trim()
-
       const formDataToSend = new FormData()
-      formDataToSend.append('name', `Имя: ${formData.name}`)
-      formDataToSend.append('phone', `Телефон: ${formData.phone}`)
-      formDataToSend.append('address', `Адрес: ${formData.address}`)
-      formDataToSend.append('message', `Дополнительная информация: ${formData.message}`)
-      formDataToSend.append('date', `Дата: ${new Date().toLocaleString('ru-RU')}`)
+      formDataToSend.append('name', formData.name)
+      formDataToSend.append('phone', formData.phone)
+      formDataToSend.append('address', formData.address)
+      formDataToSend.append('message', formData.message)
 
       const response = await fetch('/send.php', {
         method: 'POST',
         body: formDataToSend
       })
 
-      const result = await response.json()
-      
-      if (result.statusCode === 200) {
-        alert(result.message)
+      if (response.ok) {
+        alert('Заявка успешно отправлена!')
         setFormData({ name: '', phone: '', address: '', message: '' })
       } else {
-        throw new Error(result.message || 'Ошибка отправки')
+        throw new Error('Ошибка отправки заявки')
       }
     } catch (error) {
-      // Fallback на mailto если PHP endpoint недоступен
-      const emailBody = `
-Новая заявка с сайта АКСИОСТВ:
-
-Имя: ${formData.name}
-Телефон: ${formData.phone}
-Адрес: ${formData.address}
-Дополнительная информация: ${formData.message}
-
-Дата: ${new Date().toLocaleString('ru-RU')}
-      `.trim()
-      
-      const mailtoLink = `mailto:admin@axiostv.ru?subject=Новая заявка с сайта АКСИОСТВ&body=${encodeURIComponent(emailBody)}`
-      window.open(mailtoLink, '_blank')
-      
-      alert('Откроется почтовый клиент для отправки заявки.')
-      setFormData({ name: '', phone: '', address: '', message: '' })
+      alert('Ошибка отправки заявки. Попробуйте позже.')
+      console.error('Ошибка:', error)
     } finally {
       setIsSubmitting(false)
     }
