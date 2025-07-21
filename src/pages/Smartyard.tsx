@@ -178,7 +178,7 @@ export default function Smartyard() {
             <div className="relative">
               <div className="bg-gradient-to-br from-red-100 to-red-100 rounded-3xl p-8 relative overflow-hidden">
 
-                <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full opacity-20"></div>
+
                 
 
               </div>
