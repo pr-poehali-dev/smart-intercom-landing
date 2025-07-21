@@ -180,7 +180,7 @@ export default function Smartyard() {
                 <img 
                   src="https://cdn.poehali.dev/files/b3946266-3b38-406a-b68d-e56e53840993.jpg" 
                   alt="Звонок в домофон" 
-                  className="w-full w-[312px] mx-auto rounded-2xl shadow-2xl"
+                  className="w-[312px] mx-auto rounded-2xl shadow-2xl"
                 />
               </div>
             </div>
@@ -302,7 +302,7 @@ export default function Smartyard() {
                 <img 
                   src="https://cdn.poehali.dev/files/2e56b081-c0a1-43e1-b75d-4e0c4bfcf2be.jpg" 
                   alt="Мобильное приложение АКСИОСТВ - карта камер" 
-                  className="w-full w-[312px] mx-auto rounded-2xl shadow-2xl"
+                  className="w-[312px] mx-auto rounded-2xl shadow-2xl"
                 />
               </div>
             </div>
@@ -319,7 +319,7 @@ export default function Smartyard() {
                 <img 
                   src="https://cdn.poehali.dev/files/40d1db1e-b79e-426b-b60c-90afa35bf363.jpg" 
                   alt="Мобильное приложение АКСИОСТВ - персональный контроль" 
-                  className="w-full w-[312px] mx-auto rounded-2xl shadow-2xl"
+                  className="w-[312px] mx-auto rounded-2xl shadow-2xl"
                 />
               </div>
             </div>

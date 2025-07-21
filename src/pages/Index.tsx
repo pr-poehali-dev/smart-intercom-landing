@@ -130,7 +130,7 @@ export default function Index() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Лидер в области умной видеодомофонии и видеонаблюдения
+                Лидер в области умной видеодомофонии и видеонаблюдения и современных услуг связи
               </p>
             </div>
           </div>
