@@ -176,7 +176,7 @@ export default function Smartyard() {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl p-8 relative overflow-hidden">
+              <div className="bg-[#e4cbcb] rounded-3xl p-8 relative overflow-hidden">
                 <img 
                   src="https://cdn.poehali.dev/files/b3946266-3b38-406a-b68d-e56e53840993.jpg" 
                   alt="Звонок в домофон" 
