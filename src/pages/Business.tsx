@@ -1,8 +1,52 @@
 import { Link } from "react-router-dom"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 import Icon from "@/components/ui/icon"
+import { useState } from "react"
 
 export default function Business() {
+  const [formData, setFormData] = useState({ name: '', phone: '', address: '', message: '' })
+  const [errors, setErrors] = useState<{[key: string]: string}>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const validatePhone = (phone: string) => {
+    const cleanPhone = phone.replace(/\D/g, '')
+    return cleanPhone.length === 11 && cleanPhone.startsWith('79')
+  }
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }))
+    if (errors[field]) setErrors(prev => ({ ...prev, [field]: '' }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    const newErrors: {[key: string]: string} = {}
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Номер телефона обязателен'
+    } else if (!validatePhone(formData.phone)) {
+      newErrors.phone = 'Номер должен содержать 11 цифр и начинаться с 79'
+    }
+    if (Object.keys(newErrors).length > 0) { setErrors(newErrors); return }
+    setIsSubmitting(true)
+    try {
+      const fd = new FormData()
+      fd.append('name', formData.name)
+      fd.append('phone', formData.phone)
+      fd.append('address', formData.address)
+      fd.append('message', formData.message)
+      const response = await fetch('/send.php', { method: 'POST', body: fd })
+      if (response.ok) {
+        alert('Заявка успешно отправлена!')
+        setFormData({ name: '', phone: '', address: '', message: '' })
+      } else { throw new Error('Ошибка отправки заявки') }
+    } catch (error) {
+      alert('Ошибка отправки заявки. Попробуйте позже.')
+      console.error('Ошибка:', error)
+    } finally { setIsSubmitting(false) }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -331,44 +375,115 @@ export default function Business() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA Section */}
       <section id="contact" className="py-16 bg-gradient-to-r from-green-600 to-green-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Оставьте заявку</h2>
-          <p className="text-green-100 text-lg mb-8">
-            Менеджер свяжется с вами, выедет на объект и подготовит индивидуальное коммерческое предложение
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Готовы к сотрудничеству?
+          </h2>
+          <p className="text-xl text-green-100 mb-8">
+            Оставьте заявку и получите бесплатную консультацию
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+74742210001">
-              <Button size="lg" className="bg-white text-green-600 hover:bg-green-50 font-semibold px-8 w-full sm:w-auto">
-                <Icon name="Phone" size={18} className="mr-2" />
-                +7-4742-210001
+          <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-md mx-auto">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Сделать заявку</h3>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <Input
+                type="text"
+                placeholder="Название компании / Ваше имя"
+                className="w-full"
+                value={formData.name}
+                onChange={(e) => handleInputChange('name', e.target.value)}
+              />
+              <div>
+                <Input
+                  type="tel"
+                  placeholder="Телефон (79XXXXXXXXX)"
+                  className={`w-full ${errors.phone ? 'border-red-500' : ''}`}
+                  value={formData.phone}
+                  onChange={(e) => handleInputChange('phone', e.target.value)}
+                  required
+                />
+                {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+              </div>
+              <Input
+                type="text"
+                placeholder="Адрес объекта"
+                className="w-full"
+                value={formData.address}
+                onChange={(e) => handleInputChange('address', e.target.value)}
+              />
+              <Textarea
+                placeholder="Дополнительная информация"
+                className="w-full h-24 resize-none"
+                value={formData.message}
+                onChange={(e) => handleInputChange('message', e.target.value)}
+              />
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-lg py-6 disabled:opacity-50"
+              >
+                {isSubmitting ? 'Отправляется...' : 'Отправить заявку'}
               </Button>
-            </a>
-            <a href="tel:+79046810003">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 w-full sm:w-auto">
-                <Icon name="Smartphone" size={18} className="mr-2" />
-                +7-904-681-0003
-              </Button>
-            </a>
+            </form>
+            <p className="text-xs text-gray-500 mt-4">
+              Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+            </p>
           </div>
-          <p className="text-green-200 text-sm mt-6">
-            Или напишите на <a href="mailto:admin@axiostv.ru" className="underline hover:text-white">admin@axiostv.ru</a>
-          </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Link to="/">
-            <img
-              src="https://cdn.poehali.dev/files/1a89557c-b358-4617-9d1b-8ae8157d0144.png"
-              alt="АКСИОСТВ"
-              className="h-8 w-auto mx-auto mb-4"
-            />
-          </Link>
-          <p className="text-gray-500 text-sm">&copy; 2024 АКСИОСТВ. Все права защищены.</p>
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-[6fr_4fr_1fr_1fr] gap-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-4">
+                <Link to="/">
+                  <img
+                    src="https://cdn.poehali.dev/files/1a89557c-b358-4617-9d1b-8ae8157d0144.png"
+                    alt="АКСИОСТВ"
+                    className="h-8 w-auto"
+                  />
+                </Link>
+              </div>
+              <p className="text-gray-400 text-sm">Лидер в области умной видеодомофонии и видеонаблюдения</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4">Услуги</h3>
+              <div className="flex flex-col space-y-2 text-sm text-gray-400">
+                <span>Интернет для бизнеса</span>
+                <span>Видеонаблюдение</span>
+                <span>IP-телефония</span>
+                <span>СКУД и охрана</span>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4">Контакты</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>+7-904-681-0003</li>
+                <li>admin@axiostv.ru</li>
+                <li>г. Липецк, пр. Победы 106а</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4">Социальные сети</h3>
+              <div className="flex space-x-4">
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white hover:border-white">
+                  <Icon name="MessageSquare" size={16} />
+                </Button>
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white hover:border-white">
+                  <Icon name="Instagram" size={16} />
+                </Button>
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white hover:border-white">
+                  <Icon name="Youtube" size={16} />
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+            <p>&copy; 2024 АКСИОСТВ. Все права защищены.</p>
+          </div>
         </div>
       </footer>
     </div>
