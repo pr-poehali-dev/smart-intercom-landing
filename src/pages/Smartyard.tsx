@@ -198,6 +198,9 @@ export default function Smartyard() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               АКСИОСТВ — лидер в области умной видеодомофонии и видеонаблюдения с проверенными решениями
             </p>
+            <p className="text-base text-gray-500 max-w-3xl mx-auto mt-3">
+              Уникальные услуги доступны за счет синергии качественных линий связи, компетенций в BigData и полностью собственного программного обеспечения
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -213,6 +216,12 @@ export default function Smartyard() {
                 title: "Персонализация", 
                 description: "Персональные ключи и уведомления",
                 color: "green"
+              },
+              {
+                icon: "HandMetal",
+                title: "Свободные руки",
+                description: "Открытие дверей без ключей при отключенном интернете",
+                color: "teal"
               },
               {
                 icon: "CircleEllipsis",
@@ -232,6 +241,7 @@ export default function Smartyard() {
                   <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${
                     item.color === 'blue' ? 'from-red-500 to-red-600' :
                     item.color === 'green' ? 'from-red-500 to-red-600' :
+                    item.color === 'teal' ? 'from-teal-500 to-teal-600' :
                     item.color === 'orange' ? 'from-orange-500 to-orange-600' :
                     'from-purple-500 to-purple-600'
                   } flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -270,7 +280,8 @@ export default function Smartyard() {
                   "Камера внутреннего пространства",
                   "Камера лифтового холла",
                   "Камера 1-го этажа у почтовых ящиков",
-                  "Дополнительные камеры на углах и сзади дома"
+                  "Камеры на торцах и сзади дома",
+                  "Камеры в кабинах лифтов"
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <Icon name="CheckCircle" size={20} className="text-green-500 flex-shrink-0" />
