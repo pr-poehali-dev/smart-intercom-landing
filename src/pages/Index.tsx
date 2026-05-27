@@ -171,10 +171,6 @@ export default function Index() {
                   <a href="tel:+79046810003" className="hover:text-white transition-colors">+7-904-681-0003</a>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon name="Phone" size={16} className="text-red-400" />
-                  <a href="tel:+74742210001" className="hover:text-white transition-colors">+7-4742-210001</a>
-                </div>
-                <div className="flex items-center space-x-2">
                   <Icon name="Mail" size={16} className="text-red-400" />
                   <a href="mailto:admin@axiostv.ru" className="hover:text-white transition-colors">Email</a>
                 </div>

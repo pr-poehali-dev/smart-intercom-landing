@@ -179,7 +179,7 @@ export default function Smartyard() {
               <div className="bg-[#e4cbcb] rounded-3xl p-8 relative overflow-hidden">
                 <img 
                   src="https://cdn.poehali.dev/files/b3946266-3b38-406a-b68d-e56e53840993.jpg" 
-                  alt="Звонок в домофон" 
+                  alt="" 
                   className="w-[312px] mx-auto rounded-2xl shadow-2xl"
                 />
               </div>
@@ -245,7 +245,7 @@ export default function Smartyard() {
                     item.color === 'orange' ? 'from-orange-500 to-orange-600' :
                     'from-purple-500 to-purple-600'
                   } flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <Icon name={item.icon as any} size={28} className="text-white" />
+                    <Icon name={item.icon} size={28} className="text-white" />
                   </div>
                   <CardTitle className="text-xl font-semibold">{item.title}</CardTitle>
                 </CardHeader>
@@ -312,7 +312,7 @@ export default function Smartyard() {
               <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8">
                 <img 
                   src="https://cdn.poehali.dev/files/2e56b081-c0a1-43e1-b75d-4e0c4bfcf2be.jpg" 
-                  alt="Мобильное приложение АКСИОСТВ - карта камер" 
+                  alt="" 
                   className="w-[312px] mx-auto rounded-2xl shadow-2xl"
                 />
               </div>
@@ -329,7 +329,7 @@ export default function Smartyard() {
               <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl p-8">
                 <img 
                   src="https://cdn.poehali.dev/files/40d1db1e-b79e-426b-b60c-90afa35bf363.jpg" 
-                  alt="Мобильное приложение АКСИОСТВ - персональный контроль" 
+                  alt="" 
                   className="w-[312px] mx-auto rounded-2xl shadow-2xl"
                 />
               </div>
@@ -458,7 +458,7 @@ export default function Smartyard() {
                   }
                 ].map((item, index) => (
                   <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                    <Icon name={item.icon as any} size={24} className="text-blue-500 mb-2" />
+                    <Icon name={item.icon} size={24} className="text-blue-500 mb-2" />
                     <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
                     <p className="text-sm text-gray-600">{item.description}</p>
                   </div>
@@ -470,7 +470,7 @@ export default function Smartyard() {
               <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8">
                 <img
                   src="https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/19799a64-c85a-4e6e-b658-a403c2e394cd.jpg"
-                  alt="Мобильное приложение АКСИОСТВ"
+                  alt=""
                   className="w-[312px] mx-auto rounded-2xl shadow-2xl"
                 />
               </div>
