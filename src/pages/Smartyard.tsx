@@ -475,8 +475,15 @@ export default function Smartyard() {
       </section>
 
       {/* CTA Section */}
-      <section id="application-form" className="py-16 bg-gradient-to-r from-red-600 to-red-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section id="application-form" className="py-16 bg-gradient-to-r from-red-600 to-red-500 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/19799a64-c85a-4e6e-b658-a403c2e394cd.jpg"
+            alt="Мобильное приложение АКСИОСТВ"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl font-bold text-white mb-4">
             Готовы сделать ваш дом безопаснее?
           </h2>
