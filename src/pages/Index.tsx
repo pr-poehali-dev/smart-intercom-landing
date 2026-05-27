@@ -42,26 +42,8 @@ const services = [
   },
   {
     id: 5,
-    title: "Список приложений",
-    description: "Установите мобильные приложения на все случаи жизни",
-    icon: "Smartphone",
-    link: "https://axiostv.ru/apps/",
-    color: "orange",
-    internal: false
-  },
-  {
-    id: 6,
-    title: "Как оплатить",
-    description: "Подробное описание доступных способов оплаты",
-    icon: "Coins",
-    link: "https://axiostv.ru/pay/",
-    color: "emerald",
-    internal: false
-  },
-  {
-    id: 7,
-    title: "Личный кабинет",
-    description: "Детализация и управление услугами",
+    title: "Личный кабинет, приложения и оплата",
+    description: "Детализация, управление услугами и все способы оплаты",
     icon: "Files",
     link: "/personal-account",
     color: "indigo",
