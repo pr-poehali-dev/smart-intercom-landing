@@ -63,9 +63,9 @@ const services = [
     title: "Личный кабинет",
     description: "Детализация и управление услугами",
     icon: "Files",
-    link: "https://bll.axiostv.ru/index.html",
+    link: "/personal-account",
     color: "indigo",
-    internal: false
+    internal: true
   }
 ]
 
@@ -94,7 +94,7 @@ export default function Index() {
         <Card className="group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-gray-50 to-white h-full cursor-pointer">
           <CardHeader className="text-center pb-4">
             <div className={`w-16 h-16 mx-auto rounded-2xl ${getColorClasses(service.color)} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-              <Icon name={service.icon as any} size={24} className="text-white" />
+              <Icon name={service.icon} size={24} className="text-white" />
             </div>
             <CardTitle className="text-xl font-bold text-gray-900">{service.title}</CardTitle>
           </CardHeader>
