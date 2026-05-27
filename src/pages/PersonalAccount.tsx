@@ -1,4 +1,6 @@
 import Icon from "@/components/ui/icon"
+import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom"
 
 export default function PersonalAccount() {
   return (
@@ -233,6 +235,60 @@ export default function PersonalAccount() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-[6fr_4fr_1fr_1fr] gap-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-4">
+                <Link to="/">
+                  <img
+                    src="https://cdn.poehali.dev/files/1a89557c-b358-4617-9d1b-8ae8157d0144.png"
+                    alt="АКСИОСТВ"
+                    className="h-8 w-auto"
+                  />
+                </Link>
+              </div>
+              <p className="text-gray-400 text-sm">Лидер в области умной видеодомофонии и видеонаблюдения</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4">Услуги</h3>
+              <div className="flex flex-col space-y-2 text-sm text-gray-400">
+                <span>Видеодомофон и видеонаблюдение в МКД</span>
+                <span>Индивидуальное видеонаблюдение</span>
+                <span>Интернет</span>
+                <span>Телевидение</span>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4">Контакты</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>+7-904-681-0003</li>
+                <li>admin@axiostv.ru</li>
+                <li>г. Липецк, пр. Победы 106а</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4">Социальные сети</h3>
+              <div className="flex space-x-4">
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white hover:border-white">
+                  <Icon name="MessageSquare" size={16} />
+                </Button>
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white hover:border-white">
+                  <Icon name="Instagram" size={16} />
+                </Button>
+                <Button size="sm" variant="outline" className="border-gray-600 text-gray-400 hover:text-white hover:border-white">
+                  <Icon name="Youtube" size={16} />
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+            <p>&copy; 2024 АКСИОСТВ. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
