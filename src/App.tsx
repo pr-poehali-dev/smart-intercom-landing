@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import Smartyard from "./pages/Smartyard";
 import PersonalAccount from "./pages/PersonalAccount";
 import SmartHome from "./pages/SmartHome";
+import HomeServices from "./pages/HomeServices";
+import Business from "./pages/Business";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +25,8 @@ const App = () => (
           <Route path="/smartyard" element={<Smartyard />} />
           <Route path="/personal-account" element={<PersonalAccount />} />
           <Route path="/smarthome" element={<SmartHome />} />
+          <Route path="/home-services" element={<HomeServices />} />
+          <Route path="/business" element={<Business />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

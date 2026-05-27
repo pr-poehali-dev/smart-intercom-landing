@@ -27,18 +27,18 @@ const services = [
     title: "Услуги для дома",
     description: "Интернет, телевидение, видеонаблюдение, умный дом",
     icon: "Wifi",
-    link: "https://axiostv.ru/b2c/",
+    link: "/home-services",
     color: "blue",
-    internal: false
+    internal: true
   },
   {
     id: 3,
     title: "Для бизнеса",
     description: "Комплексные решения для юридических лиц",
     icon: "Building",
-    link: "https://axiostv.ru/b2b/",
+    link: "/business",
     color: "green",
-    internal: false
+    internal: true
   },
   {
     id: 4,
