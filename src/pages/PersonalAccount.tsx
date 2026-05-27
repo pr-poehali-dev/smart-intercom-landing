@@ -56,41 +56,31 @@ export default function PersonalAccount() {
             {/* Feature cards */}
             <div className="space-y-5">
 
-              {/* Раздел Договор */}
+              {/* Свёрнутый вид */}
               <div className="flex gap-5 p-6 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl border border-indigo-100">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center shadow">
-                  <Icon name="FileText" size={22} className="text-white" />
+                  <Icon name="PanelTopClose" size={22} className="text-white" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-gray-900">Раздел «Договор»</h3>
+                  <h3 className="text-lg font-bold text-gray-900">Раздел «Договор» — свёрнутый вид</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    В свёрнутом виде отображает краткую справку о состоянии и сроке оплаты. В развёрнутом виде представлена полная информация о подключённых услугах, их стоимости и сроках оплаты.
+                    Отображает краткую справку о состоянии и сроке оплаты.
                   </p>
                 </div>
               </div>
 
-              {/* Баланс и платёж */}
-              <div className="flex gap-5 p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl border border-green-100">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow">
-                  <Icon name="Wallet" size={22} className="text-white" />
+              {/* Развёрнутый вид */}
+              <div className="flex gap-5 p-6 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl border border-indigo-100">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center shadow">
+                  <Icon name="PanelTopOpen" size={22} className="text-white" />
                 </div>
-                <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-gray-900">Баланс и рекомендованный платёж</h3>
+                <div className="space-y-3">
+                  <h3 className="text-lg font-bold text-gray-900">Раздел «Договор» — развёрнутый вид</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    В верхней части представлен текущий баланс, в нижней — сумма рекомендованного платежа с учётом ближайшего продления услуг. Чуть ниже кнопка <strong>«Перейти к оплате»</strong>, которая позволяет провести оплату различными способами.
+                    Представлена полная информация о подключённых услугах, их стоимости и сроках оплаты. В верхней части — текущий баланс, в нижней — сумма рекомендованного платежа с учётом ближайшего продления услуг. Чуть ниже кнопка <strong>«Перейти к оплате»</strong>, которая позволяет провести оплату различными способами.
                   </p>
-                </div>
-              </div>
-
-              {/* Детализация */}
-              <div className="flex gap-5 p-6 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl border border-purple-100">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center shadow">
-                  <Icon name="ListOrdered" size={22} className="text-white" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-gray-900">Раздел «Детализация оплат и снятий»</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Позволяет провести самостоятельную сверку расчётов и получить акт выполненных работ (для юрлиц). Также для юрлиц имеется кнопка <strong>«Получить счёт для оплаты»</strong>.
+                    Раздел <strong>«Детализация оплат и снятий»</strong> позволяет провести самостоятельную сверку расчётов и получить акт выполненных работ (для юрлиц). Также для юрлиц имеется кнопка <strong>«Получить счёт для оплаты»</strong>.
                   </p>
                 </div>
               </div>
@@ -103,10 +93,10 @@ export default function PersonalAccount() {
       {/* Mobile Apps Section */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-3xl p-8 lg:p-12 text-white text-center space-y-6">
+          <div className="bg-gradient-to-r from-red-600 to-red-500 rounded-3xl p-8 lg:p-12 text-white text-center space-y-6">
             <div className="space-y-2">
               <h2 className="text-2xl lg:text-3xl font-bold">Скачайте приложение</h2>
-              <p className="text-indigo-200 text-lg">Личный кабинет доступен в мобильных приложениях АКСИОСТВ</p>
+              <p className="text-red-100 text-lg">Личный кабинет доступен в мобильных приложениях АКСИОСТВ</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <a
