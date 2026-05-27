@@ -14,6 +14,15 @@ const services = [
     internal: true
   },
   {
+    id: 6,
+    title: "Умный дом",
+    description: "Комфорт и автоматизация для дома или квартиры",
+    icon: "Lightbulb",
+    link: "/smarthome",
+    color: "orange",
+    internal: true
+  },
+  {
     id: 2,
     title: "Услуги для дома",
     description: "Интернет, телевидение, видеонаблюдение, умный дом",

@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Smartyard from "./pages/Smartyard";
 import PersonalAccount from "./pages/PersonalAccount";
+import SmartHome from "./pages/SmartHome";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/smartyard" element={<Smartyard />} />
           <Route path="/personal-account" element={<PersonalAccount />} />
+          <Route path="/smarthome" element={<SmartHome />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
