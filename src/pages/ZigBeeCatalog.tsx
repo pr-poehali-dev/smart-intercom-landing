@@ -293,21 +293,21 @@ export default function ZigBeeCatalog() {
                 {items.map(product => (
                   <div
                     key={product.id}
-                    className={`bg-white rounded-2xl border p-4 shadow-sm hover:shadow-md transition-all ${
+                    className={`bg-white rounded-xl border p-3 shadow-sm hover:shadow-md transition-all ${
                       product.discontinued ? "opacity-60" : ""
                     }`}
                   >
                     {product.image ? (
-                      <div className="w-full h-40 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                      <div className="w-full aspect-square rounded-lg overflow-hidden mb-3 bg-gray-50 flex items-center justify-center">
                         <img src={product.image} alt={product.name} className="w-full h-full object-contain" />
                       </div>
                     ) : (
-                      <div className={`w-full h-40 rounded-xl bg-gradient-to-br ${categoryIconColors[product.category]} flex items-center justify-center mb-4`}>
-                        <Icon name={product.icon} size={48} className="text-white/80" />
+                      <div className={`w-full aspect-square rounded-lg bg-gradient-to-br ${categoryIconColors[product.category]} flex items-center justify-center mb-3`}>
+                        <Icon name={product.icon} size={40} className="text-white/80" />
                       </div>
                     )}
 
-                    <div className="space-y-2">
+                    <div className="space-y-1.5">
                       {product.discontinued && (
                         <span className="inline-block px-2 py-0.5 bg-gray-100 text-gray-500 text-xs rounded-full">
                           Снят с производства
@@ -316,7 +316,7 @@ export default function ZigBeeCatalog() {
                       <h3 className="font-semibold text-gray-900 text-sm leading-tight">
                         {product.name}
                       </h3>
-                      <p className="text-xs text-gray-500 leading-relaxed">
+                      <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">
                         {product.description}
                       </p>
                       <div className="pt-1">
