@@ -122,7 +122,7 @@ export default function Smartyard() {
               
               <div className="flex flex-col sm:flex-row gap-4 items-center">
                 <a 
-                  href="https://apps.apple.com/us/app/axiostv/id1621118144?l=ru&ls=1" 
+                  href="https://apps.apple.com/app/axiostv/id1621118144" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:opacity-80 transition-opacity"
