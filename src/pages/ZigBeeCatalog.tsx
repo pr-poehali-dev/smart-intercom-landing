@@ -23,7 +23,7 @@ const products: Product[] = [
   { id: 57, name: "Sonoff MINI-ZBRBS ZigBee", price: 1950, category: "Реле", icon: "Cpu", description: "Реле с кнопкой управления, поддерживает нейтраль и режим без нейтрали." },
   { id: 75, name: "Sonoff MINI-ZB2GS ZigBee (2 канала) DUO", price: 2068, category: "Реле", icon: "Cpu", description: "Двухканальное реле для независимого управления двумя нагрузками.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/c527a3aa-d961-42e6-98f5-c97c501c27c0.png" },
   { id: 30, name: "Реле ZigBee 40А eWeLink", price: 1806, category: "Реле", icon: "Cpu", description: "Мощное силовое реле 40А для управления электрооборудованием." },
-  { id: 91, name: "Реле ZigBee 30А eWeLink", price: 1820, category: "Реле", icon: "Cpu", description: "Силовое реле 30А, подходит для насосов и другой мощной нагрузки." },
+  { id: 91, name: "Реле ZigBee 30А eWeLink", price: 1820, category: "Реле", icon: "Cpu", description: "Силовое реле 30А, подходит для насосов и другой мощной нагрузки.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/67e447f1-23dd-4227-a41c-672ddcb359e7.png" },
   { id: 54, name: "Реле 4-х канальное ZigBee ZG-005-RF TUYA", price: 2237, category: "Реле", icon: "Cpu", description: "Четырёхканальное реле с RF-поддержкой для сложных сценариев автоматизации.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/876e10a2-2880-4d10-b1c6-eea08609fcd4.png" },
   { id: 55, name: "ZigBee реле 2CHMINI 10A TUYA eWeLink", price: 1170, category: "Реле", icon: "Cpu", description: "Компактное двухканальное реле 10А в миниатюрном корпусе.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/a8f40893-6950-47b3-a380-e59e96e5c3cf.png" },
   { id: 56, name: "ZigBee реле 2CHMINI TUYA eWeLink БЕЗ НЕЙТРАЛИ", price: 1376, category: "Реле", icon: "Cpu", description: "Двухканальное реле для монтажа без нейтрального провода.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/f33b57f4-ba0c-4f43-819c-e86e23c5d2e0.png" },
@@ -75,7 +75,7 @@ const products: Product[] = [
   { id: 24, name: "Розетка 20А-B ZigBee eWeLink", price: 804, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 20А, чёрная, формат 86." },
   { id: 27, name: "Розетка 16А-W ZigBee eWeLink", price: 706, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 16А, белая, формат 86.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/0c520c6a-ffbe-42b9-9c93-01a86229a343.png" },
   { id: 92, name: "Розетка 16А-B ZigBee eWeLink", price: 770, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 16А, чёрная, формат 86." },
-  { id: 94, name: "Розетка 20А-W ZigBee eWeLink", price: 721, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 20А, белая, формат 86." },
+  { id: 94, name: "Розетка 20А-W ZigBee eWeLink", price: 721, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 20А, белая, формат 86.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/207acd9e-f8ef-4225-af51-b72537c58acc.png" },
   { id: 99, name: "Розетка NT86-ZBS1F-BK", price: 1420, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка ZigBee с функцией защиты от перегрузки, чёрная." },
 
   // Датчики температуры
