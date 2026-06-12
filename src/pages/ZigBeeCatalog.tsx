@@ -135,18 +135,12 @@ const products: Product[] = [
   { id: 14, name: "SONOFF SNZB-01P ZigBee", price: 1180, category: "Кнопки", icon: "CircleDot", description: "Беспроводная кнопка сцен для запуска автоматизации одним нажатием." },
   { id: 77, name: "SONOFF SNZB-01M ZigBee", price: 2459, category: "Кнопки", icon: "CircleDot", description: "Миниатюрная беспроводная кнопка с магнитным креплением." },
 
-  // Шлюзы и стики
-  { id: 21, name: "Sonoff ZB Bridge-P", price: 2449, category: "Шлюзы и стики", icon: "Router", description: "Локальный шлюз ZigBee с поддержкой до 128 устройств и локальной автоматизацией." },
-  { id: 22, name: "Умный ZBMicro USB адаптер ZigBee Sonoff", price: 1471, category: "Шлюзы и стики", icon: "Usb", description: "USB-адаптер ZigBee для подключения к роутеру или медиаплееру в качестве шлюза." },
-  { id: 58, name: "Стик SONOFF Zigbee 3.0 ZBDongle-M", price: 5167, category: "Шлюзы и стики", icon: "Usb", description: "USB-стик координатора ZigBee 3.0 для использования с Home Assistant и аналогами." },
-  { id: 62, name: "Стик SONOFF Zigbee 3.0 ZBDongle-PMG24", price: 4184, category: "Шлюзы и стики", icon: "Usb", description: "Компактный USB-стик координатора ZigBee на чипе MGM24." },
-  { id: 86, name: "Стик SONOFF Zigbee 3.0 USB Dongle Plus-E", price: 2198, category: "Шлюзы и стики", icon: "Usb", description: "USB-стик координатора ZigBee с расширенным радиусом действия." },
-  { id: 88, name: "USB-ретранслятор Zigbee eWeLink", price: 788, category: "Шлюзы и стики", icon: "Usb", description: "USB-ретранслятор для расширения радиуса сети ZigBee.", discontinued: true },
-  { id: 97, name: "Шлюз ZigBee eWeLink", price: 1850, category: "Шлюзы и стики", icon: "Router", description: "Бюджетный шлюз ZigBee от eWeLink с облачным управлением." },
-  { id: 100, name: "Стик SONOFF Zigbee 3.0 Dongle-LMG21 USB", price: 2527, category: "Шлюзы и стики", icon: "Usb", description: "USB-стик координатора на чипе LMG21 для работы с локальными системами автоматизации." },
+  // Шлюзы
+  { id: 21, name: "Sonoff ZB Bridge-P", price: 2449, category: "Шлюзы", icon: "Router", description: "Локальный шлюз ZigBee с поддержкой до 128 устройств и локальной автоматизацией." },
 ]
 
-const categories = Array.from(new Set(products.map(p => p.category)))
+const categoryOrder = ["Шлюзы", "Реле", "Выключатели", "Сенсорные выключатели", "Розетки", "Датчики температуры", "Датчики движения", "Датчики открытия", "Датчики протечки", "Датчики дыма", "Климат", "Освещение", "Шторы", "Кнопки"]
+const categories = categoryOrder.filter(cat => products.some(p => p.category === cat))
 
 const categoryColors: Record<string, string> = {
   "Реле": "bg-blue-100 text-blue-700 border-blue-200",
@@ -162,7 +156,7 @@ const categoryColors: Record<string, string> = {
   "Освещение": "bg-amber-100 text-amber-700 border-amber-200",
   "Шторы": "bg-purple-100 text-purple-700 border-purple-200",
   "Кнопки": "bg-pink-100 text-pink-700 border-pink-200",
-  "Шлюзы и стики": "bg-gray-100 text-gray-700 border-gray-200",
+  "Шлюзы": "bg-gray-100 text-gray-700 border-gray-200",
 }
 
 const categoryIconColors: Record<string, string> = {
@@ -179,7 +173,7 @@ const categoryIconColors: Record<string, string> = {
   "Освещение": "from-amber-500 to-amber-600",
   "Шторы": "from-purple-500 to-purple-600",
   "Кнопки": "from-pink-500 to-pink-600",
-  "Шлюзы и стики": "from-gray-500 to-gray-600",
+  "Шлюзы": "from-gray-500 to-gray-600",
 }
 
 export default function ZigBeeCatalog() {
