@@ -51,7 +51,7 @@ const products: Product[] = [
   { id: 49, name: "Sonoff ZBM5-1C-86W ZigBee", price: 3290, category: "Выключатели", icon: "ToggleLeft", description: "Одноклавишный выключатель Sonoff серии ZBM5, формат 86, белый." },
   { id: 50, name: "Sonoff ZBM5-2C-86W ZigBee", price: 3848, category: "Выключатели", icon: "ToggleLeft", description: "Двухклавишный выключатель Sonoff серии ZBM5, формат 86, белый." },
   { id: 51, name: "Sonoff ZBM5-3C-86W ZigBee", price: 3978, category: "Выключатели", icon: "ToggleLeft", description: "Трёхклавишный выключатель Sonoff серии ZBM5, формат 86, белый." },
-  { id: 60, name: "Выключатель для реле SONOFF E1GSL (ZBMINIL2)", price: 1009, category: "Выключатели", icon: "ToggleLeft", description: "Выносная клавиша для управления реле ZBMINIL2, монтируется в стандартную коробку.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/0138aaea-0fec-4181-a958-2000ca40c56c.png" },
+  { id: 60, name: "Выключатель для реле SONOFF E1GSL (ZBMINIL2)", price: 1009, category: "Выключатели", icon: "ToggleLeft", description: "Выносная клавиша для управления реле ZBMINIL2, монтируется в стандартную коробку." },
   { id: 102, name: "SONOFF ZigBee MINI-ZB2GS-E (2 канала)", price: 0, category: "Выключатели", icon: "ToggleLeft", description: "Двухканальный выключатель Sonoff. Цена уточняется." },
   { id: 103, name: "SONOFF ZigBee MINI-ZB2GS-L-E (2 канала без нейтрали)", price: 0, category: "Выключатели", icon: "ToggleLeft", description: "Двухканальный выключатель без нейтрали. Цена уточняется." },
 
@@ -129,7 +129,7 @@ const products: Product[] = [
   { id: 98, name: "Потолочная лампа 36Вт RGB 38х38 см ZigBee eWeLink", price: 3698, category: "Освещение", icon: "Lightbulb", description: "Умная потолочная лампа 36Вт RGB, 38×38 см, с полным управлением через приложение." },
 
   // Шторы
-  { id: 59, name: "Выключатель для штор SONOFF ZigBee MINI-ZBRBS-E", price: 2653, category: "Шторы", icon: "PanelTop", description: "Встраиваемый контроллер для моторных штор и рольставней." },
+  { id: 59, name: "Выключатель для штор SONOFF ZigBee MINI-ZBRBS-E", price: 2653, category: "Шторы", icon: "PanelTop", description: "Встраиваемый контроллер для моторных штор и рольставней.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/0138aaea-0fec-4181-a958-2000ca40c56c.png" },
   { id: 82, name: "Умный мотор для штор SONOFF ZigBee", price: 12455, category: "Шторы", icon: "PanelTop", description: "Умный привод для рулонных штор с управлением через приложение.", discontinued: true },
 
   // Кнопки
