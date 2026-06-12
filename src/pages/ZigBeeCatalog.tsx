@@ -21,13 +21,13 @@ const products: Product[] = [
   { id: 11, name: "Sonoff ZBMINIL2 ZigBee Extreme", price: 1274, category: "Реле", icon: "Cpu", description: "Одиночное миниатюрное реле без нейтрали для скрытого монтажа.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/3326b725-102f-498e-8f8d-35b55436a5e9.png" },
   { id: 48, name: "Реле ZigBee ZBMINI16А eWeLink", price: 844, category: "Реле", icon: "Cpu", description: "Бюджетное реле 16А для управления освещением и нагрузкой.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/a94867c6-af1e-4095-a5de-fb27ea0fee51.png" },
   { id: 57, name: "Sonoff MINI-ZBRBS ZigBee", price: 1950, category: "Реле", icon: "Cpu", description: "Реле с кнопкой управления, поддерживает нейтраль и режим без нейтрали." },
-  { id: 75, name: "Sonoff MINI-ZB2GS ZigBee (2 канала) DUO", price: 2068, category: "Реле", icon: "Cpu", description: "Двухканальное реле для независимого управления двумя нагрузками." },
+  { id: 75, name: "Sonoff MINI-ZB2GS ZigBee (2 канала) DUO", price: 2068, category: "Реле", icon: "Cpu", description: "Двухканальное реле для независимого управления двумя нагрузками.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/c527a3aa-d961-42e6-98f5-c97c501c27c0.png" },
   { id: 30, name: "Реле ZigBee 40А eWeLink", price: 1806, category: "Реле", icon: "Cpu", description: "Мощное силовое реле 40А для управления электрооборудованием." },
   { id: 91, name: "Реле ZigBee 30А eWeLink", price: 1820, category: "Реле", icon: "Cpu", description: "Силовое реле 30А, подходит для насосов и другой мощной нагрузки." },
   { id: 54, name: "Реле 4-х канальное ZigBee ZG-005-RF TUYA", price: 2237, category: "Реле", icon: "Cpu", description: "Четырёхканальное реле с RF-поддержкой для сложных сценариев автоматизации.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/876e10a2-2880-4d10-b1c6-eea08609fcd4.png" },
   { id: 55, name: "ZigBee реле 2CHMINI 10A TUYA eWeLink", price: 1170, category: "Реле", icon: "Cpu", description: "Компактное двухканальное реле 10А в миниатюрном корпусе.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/a8f40893-6950-47b3-a380-e59e96e5c3cf.png" },
-  { id: 56, name: "ZigBee реле 2CHMINI TUYA eWeLink БЕЗ НЕЙТРАЛИ", price: 1376, category: "Реле", icon: "Cpu", description: "Двухканальное реле для монтажа без нейтрального провода." },
-  { id: 83, name: "Реле 4-х канальное ZigBee RF 7-24V eWeLink", price: 2688, category: "Реле", icon: "Cpu", description: "Четырёхканальное реле с питанием 7-24В и RF-управлением." },
+  { id: 56, name: "ZigBee реле 2CHMINI TUYA eWeLink БЕЗ НЕЙТРАЛИ", price: 1376, category: "Реле", icon: "Cpu", description: "Двухканальное реле для монтажа без нейтрального провода.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/f33b57f4-ba0c-4f43-819c-e86e23c5d2e0.png" },
+  { id: 83, name: "Реле 4-х канальное ZigBee RF 7-24V eWeLink", price: 2688, category: "Реле", icon: "Cpu", description: "Четырёхканальное реле с питанием 7-24В и RF-управлением.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/ee17045c-8f20-4346-82d4-e0e2f590615f.png" },
   { id: 84, name: "Реле Sonoff ZBMINI ZigBee", price: 1174, category: "Реле", icon: "Cpu", description: "Классическое миниатюрное реле Sonoff первого поколения.", discontinued: true },
   { id: 85, name: "Реле Sonoff ZBMINI ZigBee (сухой контакт)", price: 1564, category: "Реле", icon: "Cpu", description: "Версия ZBMINI с переделкой под сухой контакт.", discontinued: true },
   { id: 104, name: "Реле SONOFF ZigBee MINI-ZB2GS-L (2 канала без нейтрали)", price: 0, category: "Реле", icon: "Cpu", description: "Двухканальное реле без нейтрали. Цена уточняется." },
@@ -51,7 +51,7 @@ const products: Product[] = [
   { id: 49, name: "Sonoff ZBM5-1C-86W ZigBee", price: 3290, category: "Выключатели", icon: "ToggleLeft", description: "Одноклавишный выключатель Sonoff серии ZBM5, формат 86, белый." },
   { id: 50, name: "Sonoff ZBM5-2C-86W ZigBee", price: 3848, category: "Выключатели", icon: "ToggleLeft", description: "Двухклавишный выключатель Sonoff серии ZBM5, формат 86, белый." },
   { id: 51, name: "Sonoff ZBM5-3C-86W ZigBee", price: 3978, category: "Выключатели", icon: "ToggleLeft", description: "Трёхклавишный выключатель Sonoff серии ZBM5, формат 86, белый." },
-  { id: 60, name: "Выключатель для реле SONOFF E1GSL (ZBMINIL2)", price: 1009, category: "Выключатели", icon: "ToggleLeft", description: "Выносная клавиша для управления реле ZBMINIL2, монтируется в стандартную коробку." },
+  { id: 60, name: "Выключатель для реле SONOFF E1GSL (ZBMINIL2)", price: 1009, category: "Выключатели", icon: "ToggleLeft", description: "Выносная клавиша для управления реле ZBMINIL2, монтируется в стандартную коробку.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/0138aaea-0fec-4181-a958-2000ca40c56c.png" },
   { id: 102, name: "SONOFF ZigBee MINI-ZB2GS-E (2 канала)", price: 0, category: "Выключатели", icon: "ToggleLeft", description: "Двухканальный выключатель Sonoff. Цена уточняется." },
   { id: 103, name: "SONOFF ZigBee MINI-ZB2GS-L-E (2 канала без нейтрали)", price: 0, category: "Выключатели", icon: "ToggleLeft", description: "Двухканальный выключатель без нейтрали. Цена уточняется." },
 
@@ -98,7 +98,7 @@ const products: Product[] = [
   // Датчики открытия
   { id: 16, name: "SONOFF SNZB-04P ZigBee", price: 1100, category: "Датчики открытия", icon: "DoorOpen", description: "Датчик открытия двери или окна с магнитным механизмом и уведомлениями." },
   { id: 80, name: "SONOFF SNZB-04PR2 ZigBee", price: 1207, category: "Датчики открытия", icon: "DoorOpen", description: "Обновлённый датчик открытия с улучшенным радиусом связи." },
-  { id: 81, name: "SONOFF SNZB-04 ZigBee", price: 936, category: "Датчики открытия", icon: "DoorOpen", description: "Базовый датчик открытия первого поколения.", discontinued: true },
+  { id: 81, name: "SONOFF SNZB-04 ZigBee", price: 936, category: "Датчики открытия", icon: "DoorOpen", description: "Базовый датчик открытия первого поколения.", discontinued: true, image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/0709239d-ffd0-494e-80bf-13a98ec2d0e0.png" },
 
   // Датчики протечки
   { id: 3, name: "SONOFF SNZB-05P ZigBee + кабель WLDC200", price: 1904, category: "Датчики протечки", icon: "Droplets", description: "Датчик протечки с выносным кабелем-сенсором WLDC200 для труднодоступных мест.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/40d5babe-c2b4-4349-8fb0-831a7b386f14.png" },
