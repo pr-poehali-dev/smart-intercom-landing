@@ -10,12 +10,13 @@ type Product = {
   category: string
   icon: string
   description: string
+  image?: string
   discontinued?: boolean
 }
 
 const products: Product[] = [
   // Реле
-  { id: 1, name: "Sonoff ZBMINIL2 ZigBee Extreme (комплект 2 шт)", price: 2507, category: "Реле", icon: "Cpu", description: "Миниатюрное реле без нейтрали, устанавливается в монтажную коробку. Комплект из 2 штук." },
+  { id: 1, name: "Sonoff ZBMINIL2 ZigBee Extreme (комплект 2 шт)", price: 2507, category: "Реле", icon: "Cpu", description: "Миниатюрное реле без нейтрали, устанавливается в монтажную коробку. Комплект из 2 штук.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/612399bc-735f-4789-a9e5-f4adc8085d32.png" },
   { id: 6, name: "Sonoff ZBMINIR2 ZigBee Extreme", price: 1280, category: "Реле", icon: "Cpu", description: "Компактное реле с поддержкой нейтрали и без. Встраивается в стандартную 60 мм коробку." },
   { id: 11, name: "Sonoff ZBMINIL2 ZigBee Extreme", price: 1274, category: "Реле", icon: "Cpu", description: "Одиночное миниатюрное реле без нейтрали для скрытого монтажа." },
   { id: 48, name: "Реле ZigBee ZBMINI16А eWeLink", price: 844, category: "Реле", icon: "Cpu", description: "Бюджетное реле 16А для управления освещением и нагрузкой." },
@@ -295,10 +296,15 @@ export default function ZigBeeCatalog() {
                       product.discontinued ? "opacity-60" : ""
                     }`}
                   >
-                    {/* Icon placeholder */}
-                    <div className={`w-full h-32 rounded-xl bg-gradient-to-br ${categoryIconColors[product.category]} flex items-center justify-center mb-4`}>
-                      <Icon name={product.icon} size={48} className="text-white/80" />
-                    </div>
+                    {product.image ? (
+                      <div className="w-full h-40 rounded-xl overflow-hidden mb-4 bg-gray-50 flex items-center justify-center">
+                        <img src={product.image} alt={product.name} className="w-full h-full object-contain" />
+                      </div>
+                    ) : (
+                      <div className={`w-full h-40 rounded-xl bg-gradient-to-br ${categoryIconColors[product.category]} flex items-center justify-center mb-4`}>
+                        <Icon name={product.icon} size={48} className="text-white/80" />
+                      </div>
+                    )}
 
                     <div className="space-y-2">
                       {product.discontinued && (
