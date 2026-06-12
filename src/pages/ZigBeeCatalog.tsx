@@ -18,7 +18,7 @@ const products: Product[] = [
   // Реле
   { id: 1, name: "Sonoff ZBMINIL2 ZigBee Extreme (комплект 2 шт)", price: 2507, category: "Реле", icon: "Cpu", description: "Миниатюрное реле без нейтрали, устанавливается в монтажную коробку. Комплект из 2 штук.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/612399bc-735f-4789-a9e5-f4adc8085d32.png" },
   { id: 6, name: "Sonoff ZBMINIR2 ZigBee Extreme", price: 1280, category: "Реле", icon: "Cpu", description: "Компактное реле с поддержкой нейтрали и без. Встраивается в стандартную 60 мм коробку.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/3031a1d7-87a0-4ea4-af67-937c59bec7cd.png" },
-  { id: 11, name: "Sonoff ZBMINIL2 ZigBee Extreme", price: 1274, category: "Реле", icon: "Cpu", description: "Одиночное миниатюрное реле без нейтрали для скрытого монтажа." },
+  { id: 11, name: "Sonoff ZBMINIL2 ZigBee Extreme", price: 1274, category: "Реле", icon: "Cpu", description: "Одиночное миниатюрное реле без нейтрали для скрытого монтажа.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/3326b725-102f-498e-8f8d-35b55436a5e9.png" },
   { id: 48, name: "Реле ZigBee ZBMINI16А eWeLink", price: 844, category: "Реле", icon: "Cpu", description: "Бюджетное реле 16А для управления освещением и нагрузкой." },
   { id: 57, name: "Sonoff MINI-ZBRBS ZigBee", price: 1950, category: "Реле", icon: "Cpu", description: "Реле с кнопкой управления, поддерживает нейтраль и режим без нейтрали." },
   { id: 75, name: "Sonoff MINI-ZB2GS ZigBee (2 канала) DUO", price: 2068, category: "Реле", icon: "Cpu", description: "Двухканальное реле для независимого управления двумя нагрузками." },
@@ -82,7 +82,7 @@ const products: Product[] = [
   { id: 2, name: "SONOFF SNZB-02LD IP65", price: 2293, category: "Датчики температуры", icon: "Thermometer", description: "Датчик температуры и влажности в защищённом корпусе IP65 для улицы и влажных помещений." },
   { id: 4, name: "SONOFF SNZB-02WD IP65", price: 2136, category: "Датчики температуры", icon: "Thermometer", description: "Уличный датчик температуры и влажности IP65 с дисплеем." },
   { id: 10, name: "SONOFF SNZB-02P ZigBee", price: 1174, category: "Датчики температуры", icon: "Thermometer", description: "Компактный датчик температуры и влажности с батарейным питанием." },
-  { id: 13, name: "SONOFF SNZB-02D ZigBee (с дисплеем)", price: 1486, category: "Датчики температуры", icon: "Thermometer", description: "Датчик температуры и влажности со встроенным дисплеем." },
+  { id: 13, name: "SONOFF SNZB-02D ZigBee (с дисплеем)", price: 1486, category: "Датчики температуры", icon: "Thermometer", description: "Датчик температуры и влажности со встроенным дисплеем.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/63d41785-efd2-49e1-a612-d25934736cd2.png" },
   { id: 78, name: "SONOFF SNZB-02DR2 ZigBee", price: 2008, category: "Датчики температуры", icon: "Thermometer", description: "Обновлённая версия датчика температуры и влажности с улучшенной точностью." },
   { id: 87, name: "Датчик температуры ZigBee TIV02 eWeLink", price: 878, category: "Датчики температуры", icon: "Thermometer", description: "Бюджетный датчик температуры и влажности от eWeLink." },
 
@@ -90,7 +90,7 @@ const products: Product[] = [
   { id: 12, name: "SONOFF SNZB-06P ZigBee", price: 2005, category: "Датчики движения", icon: "Eye", description: "Датчик присутствия на основе микроволнового сенсора — фиксирует даже спящего человека." },
   { id: 15, name: "SONOFF SNZB-03P ZigBee", price: 1322, category: "Датчики движения", icon: "Eye", description: "ИК-датчик движения с широким углом обзора 120° и дальностью 6 метров." },
   { id: 19, name: "Датчик движения ZigBee KR1 eWeLink", price: 2710, category: "Датчики движения", icon: "Eye", description: "Потолочный датчик движения 360° для коммерческих и жилых помещений." },
-  { id: 20, name: "Датчик движения ZigBee KV1 eWeLink", price: 1501, category: "Датчики движения", icon: "Eye", description: "Угловой датчик движения с настройкой зоны обнаружения." },
+  { id: 20, name: "Датчик движения ZigBee KV1 eWeLink", price: 1501, category: "Датчики движения", icon: "Eye", description: "Угловой датчик движения с настройкой зоны обнаружения.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/354ea922-6549-4618-b118-c6d136f944dd.png" },
   { id: 23, name: "Датчик присутствия ZigBee eWeLink", price: 2848, category: "Датчики движения", icon: "Eye", description: "Радарный датчик присутствия для точного определения нахождения человека." },
   { id: 89, name: "Датчик движения ZigBee eWeLink", price: 1019, category: "Датчики движения", icon: "Eye", description: "Классический ИК-датчик движения для базовой автоматизации." },
   { id: 90, name: "Датчик присутствия ZigBee (встраиваемый) eWeLink", price: 2886, category: "Датчики движения", icon: "Eye", description: "Встраиваемый в потолок радарный датчик присутствия." },
@@ -112,7 +112,7 @@ const products: Product[] = [
   { id: 52, name: "Датчик дождя ZigBee SRS01", price: 1549, category: "Датчики дыма", icon: "CloudRain", description: "Датчик дождя для автоматического закрытия окон и управления поливом." },
 
   // Климат
-  { id: 9, name: "Термостатический клапан SONOFF TRVZB ZigBee", price: 3768, category: "Климат", icon: "Gauge", description: "Умный термостатический клапан для радиаторов отопления с программированием по расписанию." },
+  { id: 9, name: "Термостатический клапан SONOFF TRVZB ZigBee", price: 3768, category: "Климат", icon: "Gauge", description: "Умный термостатический клапан для радиаторов отопления с программированием по расписанию.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/478bc085-d349-43b2-a8e7-70e83d1850f6.png" },
   { id: 28, name: "Термостатический клапан ZigBee NT001-W eWeLink", price: 2458, category: "Климат", icon: "Gauge", description: "Термостатический клапан для радиаторов, белый, с поддержкой eWeLink." },
   { id: 29, name: "Термостатический клапан ZigBee NT001-B eWeLink", price: 2458, category: "Климат", icon: "Gauge", description: "Термостатический клапан для радиаторов, чёрный, с поддержкой eWeLink." },
   { id: 7, name: "Водяной клапан SONOFF SWV-BSP ZigBee", price: 3409, category: "Климат", icon: "Droplet", description: "Умный шаровой клапан для управления подачей воды, резьба BSP." },
