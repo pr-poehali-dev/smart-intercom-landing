@@ -35,7 +35,7 @@ const products: Product[] = [
   // Выключатели механические
   { id: 31, name: "Выключатель ZigBee 1C-86-W MILD eWeLink", price: 1081, category: "Выключатели", icon: "ToggleLeft", description: "Одноклавишный механический выключатель формата 86, белый." },
   { id: 32, name: "Выключатель ZigBee 3C-86-W MILD eWeLink", price: 1327, category: "Выключатели", icon: "ToggleLeft", description: "Трёхклавишный механический выключатель формата 86, белый." },
-  { id: 33, name: "Выключатель ZigBee 3C-90 ULTRA-B eWeLink", price: 1262, category: "Выключатели", icon: "ToggleLeft", description: "Трёхклавишный выключатель ULTRA формата 90, чёрный." },
+  { id: 33, name: "Выключатель ZigBee 3C-90 ULTRA-B eWeLink", price: 1262, category: "Выключатели", icon: "ToggleLeft", description: "Трёхклавишный выключатель ULTRA формата 90, чёрный.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/e5d55c2d-9702-451c-8a3c-1e8f20c5498c.png" },
   { id: 34, name: "Выключатель ZigBee 1C-90 ULTRA-B eWeLink", price: 1000, category: "Выключатели", icon: "ToggleLeft", description: "Одноклавишный выключатель ULTRA формата 90, чёрный." },
   { id: 35, name: "Выключатель ZigBee 2C-90 ULTRA-B eWeLink", price: 1132, category: "Выключатели", icon: "ToggleLeft", description: "Двухклавишный выключатель ULTRA формата 90, чёрный." },
   { id: 36, name: "Выключатель ZigBee 2C-86-W MILD eWeLink", price: 1180, category: "Выключатели", icon: "ToggleLeft", description: "Двухклавишный механический выключатель формата 86, белый." },
@@ -73,7 +73,7 @@ const products: Product[] = [
   { id: 5, name: "SONOFF Zigbee S60ZBTPF 16A", price: 1850, category: "Розетки", icon: "Plug", description: "Умная розетка 16А с функцией мониторинга энергопотребления." },
   { id: 8, name: "Sonoff S26R2ZB ZigBee", price: 1426, category: "Розетки", icon: "Plug", description: "Компактная умная розетка с контролем включения/выключения." },
   { id: 24, name: "Розетка 20А-B ZigBee eWeLink", price: 804, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 20А, чёрная, формат 86." },
-  { id: 27, name: "Розетка 16А-W ZigBee eWeLink", price: 706, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 16А, белая, формат 86." },
+  { id: 27, name: "Розетка 16А-W ZigBee eWeLink", price: 706, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 16А, белая, формат 86.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/0c520c6a-ffbe-42b9-9c93-01a86229a343.png" },
   { id: 92, name: "Розетка 16А-B ZigBee eWeLink", price: 770, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 16А, чёрная, формат 86." },
   { id: 94, name: "Розетка 20А-W ZigBee eWeLink", price: 721, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 20А, белая, формат 86." },
   { id: 99, name: "Розетка NT86-ZBS1F-BK", price: 1420, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка ZigBee с функцией защиты от перегрузки, чёрная." },
@@ -137,7 +137,7 @@ const products: Product[] = [
   { id: 77, name: "SONOFF SNZB-01M ZigBee", price: 2459, category: "Кнопки", icon: "CircleDot", description: "Миниатюрная беспроводная кнопка с магнитным креплением." },
 
   // Шлюзы
-  { id: 21, name: "Sonoff ZB Bridge-P", price: 2449, category: "Шлюзы", icon: "Router", description: "Локальный шлюз ZigBee с поддержкой до 128 устройств и локальной автоматизацией." },
+  { id: 21, name: "Sonoff ZB Bridge-P", price: 2449, category: "Шлюзы", icon: "Router", description: "Локальный шлюз ZigBee с поддержкой до 128 устройств и локальной автоматизацией.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/1ef3d302-57c6-49de-b8d3-84411556684e.png" },
 ]
 
 const categoryOrder = ["Шлюзы", "Реле", "Выключатели", "Сенсорные выключатели", "Розетки", "Датчики температуры", "Датчики движения", "Датчики открытия", "Датчики протечки", "Датчики дыма", "Климат", "Освещение", "Шторы", "Кнопки"]
