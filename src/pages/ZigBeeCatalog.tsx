@@ -17,7 +17,7 @@ type Product = {
 const products: Product[] = [
   // Реле
   { id: 1, name: "Sonoff ZBMINIL2 ZigBee Extreme (комплект 2 шт)", price: 2507, category: "Реле", icon: "Cpu", description: "Миниатюрное реле без нейтрали, устанавливается в монтажную коробку. Комплект из 2 штук.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/612399bc-735f-4789-a9e5-f4adc8085d32.png" },
-  { id: 6, name: "Sonoff ZBMINIR2 ZigBee Extreme", price: 1280, category: "Реле", icon: "Cpu", description: "Компактное реле с поддержкой нейтрали и без. Встраивается в стандартную 60 мм коробку." },
+  { id: 6, name: "Sonoff ZBMINIR2 ZigBee Extreme", price: 1280, category: "Реле", icon: "Cpu", description: "Компактное реле с поддержкой нейтрали и без. Встраивается в стандартную 60 мм коробку.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/3031a1d7-87a0-4ea4-af67-937c59bec7cd.png" },
   { id: 11, name: "Sonoff ZBMINIL2 ZigBee Extreme", price: 1274, category: "Реле", icon: "Cpu", description: "Одиночное миниатюрное реле без нейтрали для скрытого монтажа." },
   { id: 48, name: "Реле ZigBee ZBMINI16А eWeLink", price: 844, category: "Реле", icon: "Cpu", description: "Бюджетное реле 16А для управления освещением и нагрузкой." },
   { id: 57, name: "Sonoff MINI-ZBRBS ZigBee", price: 1950, category: "Реле", icon: "Cpu", description: "Реле с кнопкой управления, поддерживает нейтраль и режим без нейтрали." },
@@ -101,7 +101,7 @@ const products: Product[] = [
   { id: 81, name: "SONOFF SNZB-04 ZigBee", price: 936, category: "Датчики открытия", icon: "DoorOpen", description: "Базовый датчик открытия первого поколения.", discontinued: true },
 
   // Датчики протечки
-  { id: 3, name: "SONOFF SNZB-05P ZigBee + кабель WLDC200", price: 1904, category: "Датчики протечки", icon: "Droplets", description: "Датчик протечки с выносным кабелем-сенсором WLDC200 для труднодоступных мест." },
+  { id: 3, name: "SONOFF SNZB-05P ZigBee + кабель WLDC200", price: 1904, category: "Датчики протечки", icon: "Droplets", description: "Датчик протечки с выносным кабелем-сенсором WLDC200 для труднодоступных мест.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/40d5babe-c2b4-4349-8fb0-831a7b386f14.png" },
   { id: 17, name: "SONOFF SNZB-05P ZigBee", price: 1066, category: "Датчики протечки", icon: "Droplets", description: "Компактный датчик протечки с мгновенным оповещением на смартфон." },
   { id: 18, name: "Датчик протечки ZigBee ZG-222Z eWeLink", price: 901, category: "Датчики протечки", icon: "Droplets", description: "Бюджетный датчик протечки с уведомлениями через приложение." },
   { id: 26, name: "Кабель SONOFF WLDC200", price: 1304, category: "Датчики протечки", icon: "Droplets", description: "Выносной кабель-сенсор 200 см для датчика протечки SNZB-05P." },
