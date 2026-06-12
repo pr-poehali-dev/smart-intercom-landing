@@ -44,9 +44,8 @@ const technologies = [
     pros: [
       "Открытый стандарт — огромный выбор устройств по доступным ценам",
       "Ячеистая сеть с поддержкой тысяч устройств",
-      "Поддерживается Alexa, Google Home, Apple HomeKit",
       "Очень низкое энергопотребление батарейных устройств",
-      "Активное сообщество и интеграция с Home Assistant",
+      "Активное сообщество и широкое распространение",
     ],
     cons: [
       "Работает на 2.4 ГГц — возможны помехи от Wi-Fi и микроволновок",
@@ -208,17 +207,7 @@ export default function SmartHome() {
               </Card>
             </div>
 
-            {/* Use cases */}
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Типичные применения</h3>
-              <div className="flex flex-wrap gap-3">
-                {tech.useCases.map((uc, i) => (
-                  <span key={i} className={`px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r ${tech.gradient} text-white`}>
-                    {uc}
-                  </span>
-                ))}
-              </div>
-            </div>
+
           </div>
         </section>
       ))}
