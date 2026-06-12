@@ -23,13 +23,13 @@ const products: Product[] = [
   { id: 57, name: "Sonoff MINI-ZBRBS ZigBee", price: 1950, category: "Реле", icon: "Cpu", description: "Реле с кнопкой управления, поддерживает нейтраль и режим без нейтрали." },
   { id: 75, name: "Sonoff MINI-ZB2GS ZigBee (2 канала) DUO", price: 2068, category: "Реле", icon: "Cpu", description: "Двухканальное реле для независимого управления двумя нагрузками.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/c527a3aa-d961-42e6-98f5-c97c501c27c0.png" },
   { id: 30, name: "Реле ZigBee 40А eWeLink", price: 1806, category: "Реле", icon: "Cpu", description: "Мощное силовое реле 40А для управления электрооборудованием." },
-  { id: 91, name: "Реле ZigBee 30А eWeLink", price: 1820, category: "Реле", icon: "Cpu", description: "Силовое реле 30А, подходит для насосов и другой мощной нагрузки.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/207acd9e-f8ef-4225-af51-b72537c58acc.png" },
+  { id: 91, name: "Реле ZigBee 30А eWeLink", price: 1820, category: "Реле", icon: "Cpu", description: "Силовое реле 30А, подходит для насосов и другой мощной нагрузки." },
   { id: 55, name: "ZigBee реле 2CHMINI 10A TUYA eWeLink", price: 1170, category: "Реле", icon: "Cpu", description: "Компактное двухканальное реле 10А в миниатюрном корпусе.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/a8f40893-6950-47b3-a380-e59e96e5c3cf.png" },
   { id: 56, name: "ZigBee реле 2CHMINI TUYA eWeLink БЕЗ НЕЙТРАЛИ", price: 1376, category: "Реле", icon: "Cpu", description: "Двухканальное реле для монтажа без нейтрального провода.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/f33b57f4-ba0c-4f43-819c-e86e23c5d2e0.png" },
 
   { id: 84, name: "Реле Sonoff ZBMINI ZigBee", price: 1174, category: "Реле", icon: "Cpu", description: "Классическое миниатюрное реле Sonoff первого поколения.", discontinued: true },
   { id: 85, name: "Реле Sonoff ZBMINI ZigBee (сухой контакт)", price: 1564, category: "Реле", icon: "Cpu", description: "Версия ZBMINI с переделкой под сухой контакт.", discontinued: true },
-  { id: 88, name: "USB-ретранслятор Zigbee eWeLink", price: 788, category: "Реле", icon: "Usb", description: "USB-ретранслятор для расширения радиуса сети ZigBee.", discontinued: true, image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/67e447f1-23dd-4227-a41c-672ddcb359e7.png" },
+  { id: 88, name: "USB-ретранслятор Zigbee eWeLink", price: 788, category: "Реле", icon: "Usb", description: "USB-ретранслятор для расширения радиуса сети ZigBee.", discontinued: true },
   { id: 100, name: "Реле SONOFF ZigBee MINI-ZB2GS-L (2 канала без нейтрали)", price: 0, category: "Реле", icon: "Cpu", description: "Двухканальное реле без нейтрали. Цена уточняется.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/bdc8c60c-a6e8-4a97-8dab-60a4e7fe2ce4.png" },
 
   // Выключатели механические
