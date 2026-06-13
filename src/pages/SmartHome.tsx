@@ -109,9 +109,28 @@ export default function SmartHome() {
             <Icon name="Lightbulb" size={40} className="text-white" />
           </div>
           <h1 className="text-5xl font-bold text-gray-900 mb-4">Умный дом</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
             Автоматизация любых объектов на базе проверенных протоколов. Выберите технологию, которая подходит именно вам.
           </p>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 max-w-2xl mx-auto text-left space-y-5">
+            <p className="text-gray-700 leading-relaxed">
+              Компания «АКСИОСТВ» использует преимущественно своё программное обеспечение. Для управления объектами предназначено собственное мобильное приложение.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <a href="https://apps.apple.com/app/axiostv/id1621118144" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                <img src="https://cdn.poehali.dev/files/d3c7ad91-33f9-4767-ae63-e1c9e3039236.png" alt="Загрузить в App Store" className="h-12" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=ru.axiostv.smartyard&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                <img src="https://cdn.poehali.dev/files/0a9b5ff4-c8c5-42e6-946c-37f3d0fc5438.png" alt="Загрузить в Google Play" className="h-12" />
+              </a>
+              <a href="https://appgallery.huawei.com/app/C110313065" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                <img src="https://cdn.poehali.dev/files/66e166f8-de4d-4e27-837b-9029b5becf8f.png" alt="Загрузить в AppGallery" className="h-12" />
+              </a>
+            </div>
+            <p className="text-gray-700 leading-relaxed">
+              «АКСИОСТВ» не использует чужие облачные системы. Используются только свои сервера на территории РФ, что полностью защищает клиентов от последствий любых видов санкций и других недружественных мер зарубежных партнёров.
+            </p>
+          </div>
         </div>
       </section>
 
