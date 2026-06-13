@@ -68,7 +68,7 @@ const products: Product[] = [
   { id: 71, name: "Сенсорный выключатель Zigbee 2CH SS2 (белый)", price: 1702, category: "Сенсорные выключатели", icon: "Fingerprint", description: "Беспроводной 2-канальный сенсорный выключатель на аккумуляторах, белый.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/fa8e8250-4e45-4714-ac40-d943b13ca23b.png" },
   { id: 72, name: "Сенсорный выключатель Zigbee 2CH SS2 (чёрный)", price: 1702, category: "Сенсорные выключатели", icon: "Fingerprint", description: "Беспроводной 2-канальный сенсорный выключатель на аккумуляторах, чёрный.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/7121d9ac-3286-4e59-858f-34c216777ff0.png" },
   { id: 73, name: "Сенсорный выключатель Zigbee 3CH SS3 (белый)", price: 1784, category: "Сенсорные выключатели", icon: "Fingerprint", description: "Беспроводной 3-канальный сенсорный выключатель на аккумуляторах, белый.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/707a9c34-4418-481a-87ed-bc3a6e6be2a6.png" },
-  { id: 101, name: "Сенсорный выключатель Zigbee 6CH SS6 (белый)", price: 2034, category: "Сенсорные выключатели", icon: "Fingerprint", description: "Беспроводной 6-канальный сенсорный выключатель на аккумуляторах, белый." },
+  { id: 101, name: "Сенсорный выключатель Zigbee 6CH SS6 (белый)", price: 2034, category: "Сенсорные выключатели", icon: "Fingerprint", description: "Беспроводной 6-канальный сенсорный выключатель на аккумуляторах, белый.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/cc19f44b-21fa-4c81-b252-eaa481c75c04.png" },
 
   // Розетки
   { id: 5, name: "SONOFF Zigbee S60ZBTPF 16A", price: 1850, category: "Розетки", icon: "Plug", description: "Умная розетка 16А с функцией мониторинга энергопотребления.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/08153df2-22d8-492a-8cfd-5b71250f3a5c.png" },
@@ -77,7 +77,7 @@ const products: Product[] = [
   { id: 27, name: "Розетка 16А-W ZigBee eWeLink", price: 706, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 16А, белая, формат 86.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/0c520c6a-ffbe-42b9-9c93-01a86229a343.png" },
   { id: 92, name: "Розетка 16А-B ZigBee eWeLink", price: 770, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 16А, чёрная, формат 86." },
   { id: 94, name: "Розетка 20А-W ZigBee eWeLink", price: 721, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка 20А, белая, формат 86." },
-  { id: 99, name: "Розетка NT86-ZBS1F-BK", price: 1420, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка ZigBee с функцией защиты от перегрузки, чёрная." },
+  { id: 99, name: "Розетка NT86-ZBS1F-BK", price: 1420, category: "Розетки", icon: "Plug", description: "Встраиваемая розетка ZigBee с функцией защиты от перегрузки, чёрная.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/5eb0abf8-2a42-4e3d-a099-cdb3b66cdb47.png" },
 
   // Датчики температуры
   { id: 2, name: "SONOFF SNZB-02LD IP65", price: 2293, category: "Датчики температуры", icon: "Thermometer", description: "Датчик температуры и влажности в защищённом корпусе IP65 для улицы и влажных помещений." },
@@ -98,8 +98,8 @@ const products: Product[] = [
 
   // Датчики открытия
   { id: 16, name: "SONOFF SNZB-04P ZigBee", price: 1100, category: "Датчики открытия", icon: "DoorOpen", description: "Датчик открытия двери или окна с магнитным механизмом и уведомлениями." },
-  { id: 80, name: "SONOFF SNZB-04PR2 ZigBee", price: 1207, category: "Датчики открытия", icon: "DoorOpen", description: "Обновлённый датчик открытия с улучшенным радиусом связи." },
-  { id: 81, name: "SONOFF SNZB-04 ZigBee", price: 936, category: "Датчики открытия", icon: "DoorOpen", description: "Базовый датчик открытия первого поколения.", discontinued: true, image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/0709239d-ffd0-494e-80bf-13a98ec2d0e0.png" },
+  { id: 80, name: "SONOFF SNZB-04PR2 ZigBee", price: 1207, category: "Датчики открытия", icon: "DoorOpen", description: "Обновлённый датчик открытия с улучшенным радиусом связи.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/8529ccbd-b2cb-4258-9375-0755b3d8b3ce.png" },
+  { id: 81, name: "SONOFF SNZB-04 ZigBee", price: 936, category: "Датчики открытия", icon: "DoorOpen", description: "Базовый датчик открытия первого поколения.", discontinued: true, image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/712a2597-c5e9-45e4-a2c3-1b17fa0cf095.png" },
 
   // Датчики протечки
   { id: 3, name: "SONOFF SNZB-05P ZigBee + кабель WLDC200", price: 1904, category: "Датчики протечки", icon: "Droplets", description: "Датчик протечки с выносным кабелем-сенсором WLDC200 для труднодоступных мест.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/40d5babe-c2b4-4349-8fb0-831a7b386f14.png" },
@@ -131,7 +131,7 @@ const products: Product[] = [
 
   // Шторы
   { id: 59, name: "Выключатель для штор SONOFF ZigBee MINI-ZBRBS-E", price: 2653, category: "Шторы", icon: "PanelTop", description: "Встраиваемый контроллер для моторных штор и рольставней.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/0138aaea-0fec-4181-a958-2000ca40c56c.png" },
-  { id: 82, name: "Умный мотор для штор SONOFF ZigBee", price: 12455, category: "Шторы", icon: "PanelTop", description: "Умный привод для рулонных штор с управлением через приложение.", discontinued: true },
+  { id: 82, name: "Умный мотор для штор SONOFF ZigBee", price: 12455, category: "Шторы", icon: "PanelTop", description: "Умный привод для рулонных штор с управлением через приложение.", discontinued: true, image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/434b8181-5475-49b4-8cfb-0760c70dfd13.png" },
 
   // Кнопки
   { id: 14, name: "SONOFF SNZB-01P ZigBee", price: 1180, category: "Кнопки", icon: "CircleDot", description: "Беспроводная кнопка сцен для запуска автоматизации одним нажатием.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/45a59421-1c9c-4dfb-892a-8eaf5ffe80bc.png" },
@@ -323,7 +323,7 @@ export default function ZigBeeCatalog() {
                       <div className="pt-1">
                         {product.price > 0 ? (
                           <span className="text-lg font-bold text-orange-600">
-                            {product.price.toLocaleString("ru-RU")} ₽
+                            {product.price.toLocaleString("ru-RU")} ₽*
                           </span>
                         ) : (
                           <span className="text-sm text-gray-400">Цена уточняется</span>
@@ -353,6 +353,13 @@ export default function ZigBeeCatalog() {
           </Link>
         </div>
       </section>
+
+      {/* Disclaimer */}
+      <div className="px-4 sm:px-6 lg:px-8 py-6 bg-gray-50">
+        <p className="max-w-5xl mx-auto text-xs text-gray-400 text-center leading-relaxed">
+          *Не является офертой. Все цены носят справочный характер. Уточняйте текущую цену используя форму запроса или контакты ниже.
+        </p>
+      </div>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
