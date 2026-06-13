@@ -16,7 +16,7 @@ const services = [
   {
     id: 6,
     title: "Умный дом",
-    description: "Комфорт и автоматизация для дома или квартиры",
+    description: "Комфорт, автоматизация и безопасность для любого объекта",
     icon: "Lightbulb",
     link: "/smarthome",
     color: "orange",
