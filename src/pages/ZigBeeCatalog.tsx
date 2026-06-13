@@ -109,7 +109,7 @@ const products: Product[] = [
 
   // Датчики дыма
   { id: 25, name: "Датчик дыма ZigBee", price: 3073, category: "Датчики дыма", icon: "FlameKindling", description: "Автономный датчик дыма с ZigBee связью и громкой сиреной.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/8a233af1-3dd4-4b56-9f2a-1485f3358710.png" },
-  { id: 74, name: "Датчик дыма ZigBee eWeLink", price: 3073, category: "Датчики дыма", icon: "FlameKindling", description: "Сертифицированный датчик дыма с интеграцией в экосистему eWeLink." },
+  { id: 74, name: "Датчик дыма ZigBee eWeLink", price: 3073, category: "Датчики дыма", icon: "FlameKindling", description: "Сертифицированный датчик дыма с интеграцией в экосистему eWeLink.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/1ede7ac3-74f7-487e-b6da-3225056515ce.png" },
   { id: 52, name: "Датчик дождя ZigBee SRS01", price: 1549, category: "Датчики дыма", icon: "CloudRain", description: "Датчик дождя для автоматического закрытия окон и управления поливом.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/6627cd32-7ef4-487a-b67c-f67989e2ccc7.png" },
 
   // Климат
@@ -123,7 +123,7 @@ const products: Product[] = [
   { id: 40, name: "Потолочный спот ZigBee с доп. Б.П. NT10W eWeLink", price: 1524, category: "Освещение", icon: "Lightbulb", description: "Потолочный светильник-спот ZigBee 10Вт с внешним блоком питания." },
   { id: 47, name: "Потолочный спот ZigBee со встроеным Б.П. NT10WIN eWeLink", price: 1603, category: "Освещение", icon: "Lightbulb", description: "Потолочный спот ZigBee 10Вт со встроенным блоком питания." },
   { id: 53, name: "Потолочная лампа 24Вт RGB 30х30 см ZigBee eWeLink", price: 2854, category: "Освещение", icon: "Lightbulb", description: "Умная потолочная лампа 24Вт RGB, 30×30 см, с управлением цветом и яркостью." },
-  { id: 76, name: "Димер ZigBee SONOFF MINI-ZBDIM", price: 3062, category: "Освещение", icon: "SunMedium", description: "Встраиваемый диммер для управления яркостью светодиодных и ламп накаливания." },
+  { id: 76, name: "Димер ZigBee SONOFF MINI-ZBDIM", price: 3062, category: "Освещение", icon: "SunMedium", description: "Встраиваемый диммер для управления яркостью светодиодных и ламп накаливания.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/1180f0cd-efc9-4ad8-8234-5c20d105df04.png" },
   { id: 79, name: "Диммер ZigBee SONOFF MINI-ZBDIM-E", price: 4312, category: "Освещение", icon: "SunMedium", description: "Расширенная версия диммера с поддержкой большего диапазона ламп." },
   { id: 95, name: "Потолочный спот ZigBee с доп. Б.П. NT16W eWeLink", price: 1805, category: "Освещение", icon: "Lightbulb", description: "Потолочный спот ZigBee 16Вт с внешним блоком питания." },
   { id: 96, name: "Потолочный спот ZigBee со встроеным Б.П. NT16WIN eWeLink", price: 2226, category: "Освещение", icon: "Lightbulb", description: "Потолочный спот ZigBee 16Вт со встроенным блоком питания." },
@@ -135,7 +135,7 @@ const products: Product[] = [
 
   // Кнопки
   { id: 14, name: "SONOFF SNZB-01P ZigBee", price: 1180, category: "Кнопки", icon: "CircleDot", description: "Беспроводная кнопка сцен для запуска автоматизации одним нажатием.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/45a59421-1c9c-4dfb-892a-8eaf5ffe80bc.png" },
-  { id: 77, name: "SONOFF SNZB-01M ZigBee", price: 2459, category: "Кнопки", icon: "CircleDot", description: "Миниатюрная беспроводная кнопка с магнитным креплением." },
+  { id: 77, name: "SONOFF SNZB-01M ZigBee", price: 2459, category: "Кнопки", icon: "CircleDot", description: "Миниатюрная беспроводная кнопка с магнитным креплением.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/bdd20941-872d-4338-bd5a-3d8b0b1a821a.png" },
 
   // Шлюзы
 
