@@ -88,7 +88,7 @@ const products: Product[] = [
 
   // Датчики движения и присутствия
   { id: 12, name: "SONOFF SNZB-06P ZigBee", price: 2005, category: "Датчики движения", icon: "Eye", description: "Датчик присутствия на основе микроволнового сенсора — фиксирует даже спящего человека.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/03dcb391-448d-4a25-b2d9-eb7d75003bff.png" },
-  { id: 15, name: "SONOFF SNZB-03P ZigBee", price: 1322, category: "Датчики движения", icon: "Eye", description: "ИК-датчик движения с широким углом обзора 120° и дальностью 6 метров." },
+  { id: 15, name: "SONOFF SNZB-03P ZigBee", price: 1322, category: "Датчики движения", icon: "Eye", description: "ИК-датчик движения с широким углом обзора 120° и дальностью 6 метров.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/20438adb-343a-4259-aa27-29b92eeb3be2.png" },
   { id: 19, name: "Датчик движения ZigBee KR1 eWeLink", price: 2710, category: "Датчики движения", icon: "Eye", description: "Потолочный датчик движения 360° для коммерческих и жилых помещений." },
   { id: 20, name: "Датчик движения ZigBee KV1 eWeLink", price: 1501, category: "Датчики движения", icon: "Eye", description: "Угловой датчик движения с настройкой зоны обнаружения.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/354ea922-6549-4618-b118-c6d136f944dd.png" },
   { id: 23, name: "Датчик присутствия ZigBee eWeLink", price: 2848, category: "Датчики движения", icon: "Eye", description: "Радарный датчик присутствия для точного определения нахождения человека." },
@@ -102,18 +102,18 @@ const products: Product[] = [
 
   // Датчики протечки
   { id: 3, name: "SONOFF SNZB-05P ZigBee + кабель WLDC200", price: 1904, category: "Датчики протечки", icon: "Droplets", description: "Датчик протечки с выносным кабелем-сенсором WLDC200 для труднодоступных мест.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/40d5babe-c2b4-4349-8fb0-831a7b386f14.png" },
-  { id: 17, name: "SONOFF SNZB-05P ZigBee", price: 1066, category: "Датчики протечки", icon: "Droplets", description: "Компактный датчик протечки с мгновенным оповещением на смартфон.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/d6d93b0b-ccae-4866-96b0-23073e3d8bf7.png" },
+  { id: 17, name: "SONOFF SNZB-05P ZigBee", price: 1066, category: "Датчики протечки", icon: "Droplets", description: "Компактный датчик протечки с мгновенным оповещением на смартфон.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/1caf0b56-d814-4a76-bad4-8f496315c1ab.png" },
   { id: 18, name: "Датчик протечки ZigBee ZG-222Z eWeLink", price: 901, category: "Датчики протечки", icon: "Droplets", description: "Бюджетный датчик протечки с уведомлениями через приложение." },
   { id: 26, name: "Кабель SONOFF WLDC200", price: 1304, category: "Датчики протечки", icon: "Droplets", description: "Выносной кабель-сенсор 200 см для датчика протечки SNZB-05P." },
 
   // Датчики дыма
-  { id: 25, name: "Датчик дыма ZigBee", price: 3073, category: "Датчики дыма", icon: "FlameKindling", description: "Автономный датчик дыма с ZigBee связью и громкой сиреной." },
+  { id: 25, name: "Датчик дыма ZigBee", price: 3073, category: "Датчики дыма", icon: "FlameKindling", description: "Автономный датчик дыма с ZigBee связью и громкой сиреной.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/8a233af1-3dd4-4b56-9f2a-1485f3358710.png" },
   { id: 74, name: "Датчик дыма ZigBee eWeLink", price: 3073, category: "Датчики дыма", icon: "FlameKindling", description: "Сертифицированный датчик дыма с интеграцией в экосистему eWeLink." },
   { id: 52, name: "Датчик дождя ZigBee SRS01", price: 1549, category: "Датчики дыма", icon: "CloudRain", description: "Датчик дождя для автоматического закрытия окон и управления поливом.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/6627cd32-7ef4-487a-b67c-f67989e2ccc7.png" },
 
   // Климат
   { id: 9, name: "Термостатический клапан SONOFF TRVZB ZigBee", price: 3768, category: "Климат", icon: "Gauge", description: "Умный термостатический клапан для радиаторов отопления с программированием по расписанию.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/478bc085-d349-43b2-a8e7-70e83d1850f6.png" },
-  { id: 28, name: "Термостатический клапан ZigBee NT001-W eWeLink", price: 2458, category: "Климат", icon: "Gauge", description: "Термостатический клапан для радиаторов, белый, с поддержкой eWeLink." },
+  { id: 28, name: "Термостатический клапан ZigBee NT001-W eWeLink", price: 2458, category: "Климат", icon: "Gauge", description: "Термостатический клапан для радиаторов, белый, с поддержкой eWeLink.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/5124512f-73a6-4e8e-ad5b-c768e9cf4ef1.png" },
   { id: 29, name: "Термостатический клапан ZigBee NT001-B eWeLink", price: 2458, category: "Климат", icon: "Gauge", description: "Термостатический клапан для радиаторов, чёрный, с поддержкой eWeLink." },
   { id: 7, name: "Водяной клапан SONOFF SWV-BSP ZigBee", price: 3409, category: "Климат", icon: "Droplet", description: "Умный шаровой клапан для управления подачей воды, резьба BSP." },
   { id: 61, name: "Комплект для управления климатом", price: 0, category: "Климат", icon: "Gauge", description: "Готовый комплект для автоматизации климата. Цена уточняется." },
@@ -133,7 +133,7 @@ const products: Product[] = [
   { id: 82, name: "Умный мотор для штор SONOFF ZigBee", price: 12455, category: "Шторы", icon: "PanelTop", description: "Умный привод для рулонных штор с управлением через приложение.", discontinued: true },
 
   // Кнопки
-  { id: 14, name: "SONOFF SNZB-01P ZigBee", price: 1180, category: "Кнопки", icon: "CircleDot", description: "Беспроводная кнопка сцен для запуска автоматизации одним нажатием." },
+  { id: 14, name: "SONOFF SNZB-01P ZigBee", price: 1180, category: "Кнопки", icon: "CircleDot", description: "Беспроводная кнопка сцен для запуска автоматизации одним нажатием.", image: "https://cdn.poehali.dev/projects/ec0a586e-e729-426a-8390-7b966a3ba006/bucket/45a59421-1c9c-4dfb-892a-8eaf5ffe80bc.png" },
   { id: 77, name: "SONOFF SNZB-01M ZigBee", price: 2459, category: "Кнопки", icon: "CircleDot", description: "Миниатюрная беспроводная кнопка с магнитным креплением." },
 
   // Шлюзы
